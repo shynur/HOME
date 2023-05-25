@@ -1,31 +1,25 @@
 #! /bin/bash
 #
-# Copyright (C) 2023 Shynur <one.last.kiss@outlook.com>
-#
-FUNCNEST=1000
-# 防止出现无穷递归
+# Copyright (C) 2023 谢骐 <one.last.kiss@outlook.com>
 
+FUNCNEST=1000 # 防止出现无穷递归
 PS1=_________________________________________________________$'\n'['\u'@'\H'\ '(\d)'\ '(\@)'\ '\w'/\ exit_'$?'\ '\#'_ing]$'\n''\$ '
 # 效果:
 # _________________________________________________________________
 # [昵称@主机名 (星期 月份 日) (时钟) 目录 上条命令返回值 正在输入第N条命令]
-# $
+# $ 
 #
 # 描述:
 # [\u@\H (\d) (\@) \w/ exit_$? \#_ing]\n
-# \$
+# \$ 
+PS3='You select (number): ' # select语句的提示符
 
-PS3='You select (number): '
-# select语句的提示符
-#
 alias bc='bc --warn'
 alias bzip2='bzip2 --verbose --best'
 alias cal='cal --monday'
 alias chcon='chcon --verbose'
 alias cp='cp --interactive --recursive'
-alias cpio='cpio -c --make-directories --io-size=4096 --verbose'
-# -c 使用新型的可移植存储形式
-
+alias cpio='cpio -c --make-directories --io-size=4096 --verbose' # -c 使用新型的可移植存储形式
 alias df='df -hT'
 alias dmesg='dmesg --human --color'
 alias du='du -ah --max-depth=1'
@@ -47,31 +41,22 @@ alias sestatus='sestatus -v'
 alias sudo='sudo '
 alias tar='tar --verbose'
 alias tree='tree -ahFC'
-alias type='type -a'
-# -a 在PATH中查找时,列出所有匹配项
-
+alias type='type -a' # -a 在PATH中查找时,列出所有匹配项
 alias uname='uname --all'
 alias vi=vim
 alias wc='wc --lines --words --chars'
 alias wget='wget --verbose'
 alias xargs='xargs --no-run-if-empty --verbose'
-alias xz='xz -9 --extreme --verbose'
-# -9 压缩效果最好
-# --extreme 压缩效果格外地好
-#
-shopt -u noexpand_translation
-# $"..." 生成 $"..." 而不是 $'...'
+alias xz='xz -9 --extreme --verbose' # -9 压缩效果最好; --extreme 压缩效果格外地好
 
-shopt -s interactive_comments
-# 允许在interactive shell中使用注释
+shopt -s dotglob # 使星号扩展时包含隐藏文件
+shopt -s interactive_comments # 允许在interactive shell中使用注释
+shopt -u nocasematch # case语句匹配模式时,区分大小写
+shopt -u noexpand_translation # $"..." 生成 $"..." 而不是 $'...'
 
-shopt -u nocasematch
-# case语句匹配模式时,区分大小写
-
-# Want the terminal to save each command immediately after its execution?
-# Add the following lines to ~/.bashrc file:
+# Let the terminal to save each command immediately after its execution.
 shopt -s histappend
 PROMPT_COMMAND='history -a'
+#
 
-set -o emacs
-# 使用Emacs的键位
+set -o emacs # 使用Emacs的键位
