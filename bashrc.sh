@@ -47,7 +47,7 @@ alias vi=vim
 alias wc='wc --lines --words --chars'
 alias wget='wget --verbose'
 alias xargs='xargs --no-run-if-empty --verbose'
-alias xz='xz -9 --extreme --verbose' # -9 压缩效果最好; --extreme 压缩效果格外地好
+alias xz='xz -9 --extreme --verbose' # -9 压缩效果最好;--extreme 压缩效果格外地好
 
 shopt -s dotglob # 使星号扩展时包含隐藏文件
 shopt -s interactive_comments # 允许在interactive shell中使用注释
@@ -57,6 +57,7 @@ shopt -u noexpand_translation # $"..." 生成 $"..." 而不是 $'...'
 # Let the terminal to save each command immediately after its execution.
 shopt -s histappend
 PROMPT_COMMAND='history -a'
-#
+# End of: Let the terminal to save each command immediately after its execution.
 
 set -o emacs # 使用Emacs的键位
+unset IFS # 开启Word Splitting,且让Bash为IFS使用默认值
