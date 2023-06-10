@@ -15,7 +15,6 @@ alias cpio='cpio -c --make-directories --io-size=4096 --verbose' # -c 使用新�
 alias df='df -hT'
 alias dmesg='dmesg --human --color'
 alias du='du -ah --max-depth=1'
-alias echo='echo -n -e'
 alias free='free --human --total'
 alias fuser='fuser --user --verbose'
 alias grep='grep --extended-regexp --color=always --line-number --with-filename --recursive'
@@ -41,9 +40,11 @@ alias wget='wget --verbose'
 alias xargs='xargs --no-run-if-empty --verbose'
 alias xz='xz -9 --extreme --verbose' # -9 压缩效果最好; --extreme 压缩效果格外地好
 
-shopt -s dotglob # 进行 Filename Expansion 时, 包含隐藏文件
-shopt -s failglob # 进行 Filename Expansion 时, 若匹配失败则报错
-shopt -u globskipdots # 进行 Filename Expansion 时, 不考虑 ``.'' 和 ``..''
+shopt -s dotglob # Filename Expansion 时, 包含隐藏文件
+shopt -s failglob # Filename Expansion 时, 若匹配失败则报错
+shopt -s globasciiranges # Filename Expansion 时, `[…]` 使用 ASCII 的排列顺序
+shopt -u globskipdots # Filename Expansion 时, 不考虑 `.` 和 `..`
+shopt -s globstar # Filename Expansion 时, `**` 会在当前目录及其子目录下搜索
 shopt -s interactive_comments # 允许在 interactive shell 中使用注释
 shopt -u nocaseglob # 进行 Filename Expansion 时, 区分大小写
 shopt -u nocasematch # case 语句匹配模式时, 区分大小写
