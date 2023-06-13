@@ -3,7 +3,7 @@
 # Copyright (C) 2023 谢骐 <one.last.kiss@outlook.com>
 
 FUNCNEST=1000 # 防止出现无穷递归
-PS1='[\u@\H:\w/ \#th (\d) (\@) exited_$?]'$'\n''\$ '
+PS1='[\u@\H:\w/ \#th (\d \@) exited_$?]'$'\n''\$ '
 PS3='You select (number): ' # select 语句的提示符
 
 alias bc='bc --warn'
