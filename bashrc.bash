@@ -10,7 +10,7 @@ alias bc='bc --warn'
 alias bzip2='bzip2 --verbose --best'
 alias cal='cal --monday'
 alias chcon='chcon --verbose'
-alias clang-format='clang-format --Werror -fallback-style=none --ferror-limit=0 --verbose'
+alias clang-format='clang-format --Werror -fallback-style=none --ferror-limit=0'
 alias cp='cp --interactive --recursive'
 alias cpio='cpio -c --make-directories --io-size=4096 --verbose' # -c 使用新型的可移植存储形式
 alias df='df -hT'
