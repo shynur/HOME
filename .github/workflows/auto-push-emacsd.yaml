@@ -21,6 +21,12 @@ jobs:
     steps:
       - name: first step
         run: |
-          git submodule update --init '.emacs.d'
+          mkdir shynur-HOME
+          cd shynur-HOME
+          git init
+          git pull git@github.com:shynur/HOME.git
+          git submodule update --remote --merge '.emacs.d'
           git add '.emacs.d'
           git commit -m '[action]Update Submodule .emacs.d'
+          git remote add origin git@github.com:shynur/HOME.git
+          git push -u origin main
