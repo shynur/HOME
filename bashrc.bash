@@ -1,6 +1,4 @@
 #! /bin/bash
-#
-# Copyright 2023 谢骐 <one.last.kiss@outlook.com>
 
 FUNCNEST=1000  # 防止出现无穷递归
 PS1='[\u@\H:\w/ \#th (\d \@) exited_$?]'$'\n''\$ '
@@ -60,3 +58,8 @@ unset IFS     # 开启 Word Splitting, 且让 Bash 为 IFS 使用默认值
 
 # 开启 core dump, 限制大小为 NNN 块 (通常 512B/块).
 # ulimit -c NNN
+
+
+# Local Variables:
+# coding: utf-8-unix
+# End:
