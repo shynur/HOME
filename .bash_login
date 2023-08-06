@@ -56,10 +56,13 @@ PROMPT_COMMAND='history -a'
 set -o emacs  # 使用 Emacs 的键位
 unset IFS     # 开启 Word Splitting, 且让 Bash 为 IFS 使用默认值
 
+source ~/.emacs.d/etc/use-emacs.bash
+
 # 开启 core dump, 限制大小为 NNN 块 (通常 512B/块).
 # ulimit -c NNN
 
 
 # Local Variables:
+# mode: sh
 # coding: utf-8-unix
 # End:
