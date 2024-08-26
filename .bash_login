@@ -46,7 +46,7 @@ shopt -s globstar         # Filename Expansion 时, `**` 会在当前目录及�
 shopt -s interactive_comments  # 允许在 interactive shell 中使用注释
 shopt -u nocaseglob            # 进行 Filename Expansion 时, 区分大小写
 shopt -u nocasematch           # case 语句匹配模式时, 区分大小写
-shopt -u noexpand_translation  # $"..." 生成 $"..." 而不是 $'...'
+shopt -u noexpand_translation  # $"..." 生成 $"..." 而不是 $'...', i.e., 保留原始语义.
 
 # Let the terminal to save each command immediately after its execution.
 shopt -s histappend
@@ -54,15 +54,18 @@ PROMPT_COMMAND='history -a'
 # End of: Let the terminal to save each command immediately after its execution.
 
 set -o emacs  # 使用 Emacs 的键位
-unset IFS     # 开启 Word Splitting, 且让 Bash 为 IFS 使用默认值
+setleds -v -D +num  # '-v': 显示修改后的状态.  '-D': 同时修改 键盘的 LED 灯 和 实际状态.
+unset IFS  # 开启 Word Splitting, 且让 Bash 为 IFS 使用默认值
 
-source ~/.emacs.d/etc/use-emacs.bash
+if [ -f ~/.emacs.d/etc/use-emacs.bash ]; then
+    . ~/.emacs.d/etc/use-emacs.bash
+fi
 
 # 开启 core dump, 限制大小为 NNN 块 (通常 512B/块).
 # ulimit -c NNN
 
 
 # Local Variables:
-# mode: sh
+# mode: bash
 # coding: utf-8-unix
 # End:
