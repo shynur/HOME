@@ -19,7 +19,7 @@ ps aux | grep "$2" - | {
 	    continue
 	fi
 	echo -n "kill $1 $Pid(${Cmd[0]}) ..." $'\t'
-        if kill $1 $Pid; then
+	if kill $1 $Pid; then
 	    echo 'succeeded'
 	fi
     done
