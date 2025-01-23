@@ -1,8 +1,8 @@
 #! /bin/bash
 
-FUNCNEST=1000  # 防止出现无穷递归.
-PS1='[\u@\H:\w/ \#th (\d \@) exited_$?]'$'\n''\$ '
-PS3='You select (number): '  # select 语句的提示符.
+export FUNCNEST=1000  # 防止出现无穷递归.
+PS1=[\\u@\\H:\\w/\ \\#'`(((\#%10==1))&&echo st)||(((\#%10==2))&&echo nd)||(((\#%10==3))&&echo rd)||echo th`'\ \(\\d\ \\@\)\ exited_$?]$'\n'\\\$' '
+export PS3='You select (number): '  # select 语句的提示符.
 
 alias bc='bc --warn'
 alias bzip2='bzip2 --verbose --best'
@@ -48,12 +48,12 @@ shopt -u nocaseglob            # 进行 Filename Expansion 时, 区分大小写.
 shopt -u nocasematch           # case 语句匹配模式时, 区分大小写.
 shopt -u noexpand_translation  # $"..." 生成 $"..." 而不是 $'...', i.e., 保留原始语义.
 
-HISTSIZE=10000
+export HISTSIZE=10000
 set -o history
 shopt -s histappend  # 将历史命令追加到 $HISTFILE 而不是覆盖.
-HISTTIMEFORMAT=
-HISTFILESIZE=        # ~/.bash_history 可以无限增长.
-PROMPT_COMMAND='history -a'
+export HISTTIMEFORMAT=
+export HISTFILESIZE=        # ~/.bash_history 可以无限增长.
+export PROMPT_COMMAND='history -a'
 
 set -o emacs  # 使用 Emacs 的键位.
 setleds -v -D +num  # '-v': 显示修改后的状态.  '-D': 同时修改 键盘的 LED 灯 和 实际状态.
