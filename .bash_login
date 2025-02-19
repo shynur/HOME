@@ -47,7 +47,7 @@ shopt -s interactive_comments  # 允许在 interactive shell 中使用注释.
 shopt -u nocaseglob            # 进行 Filename Expansion 时, 区分大小写.
 shopt -u nocasematch           # case 语句匹配模式时, 区分大小写.
 shopt -u noexpand_translation  # $"..." 生成 $"..." 而不是 $'...', i.e., 保留原始语义.
-set -o noclobber  # 使用 `>` 重定向时, 不要覆盖 existent 文件.
+set -o noclobber  # 使用 `>` 重定向时, 防止意外覆盖 existent 文件.  (用 `>|` 强制覆盖.)
 
 export HISTSIZE=10000
 set -o history
