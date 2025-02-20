@@ -37,8 +37,8 @@ alias ros2='which -s ros2 || {
                     echo
                     echo "一些常用命令:"
                     echo "  ~/workspace\$ rosdep install -i --from-path src --rosdistro rolling -y  # 安装依赖包"
-                    echo "  ~/workspace\$ colcon build --symlink-install\`#无需编译 Python 文件\` --packages-up-to 按需构建指定的包"
-                    echo "  ~/workspace\$ ros2\`#这是个 alias`\ &>/dev/null && . install/local_setup.bash  # 创建 underlay+overlay"
+                    echo "  ~/workspace\$ colcon build --symlink-install\`#无需编译 Python 文件\` --packages-up-to \"按需构建指定的包\""
+                    echo "  ~/workspace\$ ros2\`#这是个 alias\` &>/dev/null && . install/local_setup.bash  # 创建 underlay+overlay"
                     echo
                     echo "注意: 不要在 shell where workspace is built 中 source built overlay!"
                     echo
