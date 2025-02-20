@@ -20,13 +20,21 @@ alias grep='grep --extended-regexp --color=always --line-number --with-filename 
 alias gzip='gzip --verbose --best'
 alias info='emacs -Q -f info-standalone'
 alias jobs='jobs -l'
-alias ll='ls -1 --almost-all --author --color=always --classify --format=verbose --human-readable --size --sort=extension --time-style=long-iso'
+alias ls='ls -1 --almost-all --author --color=auto --classify --format=verbose --human-readable --size --sort=extension --time-style=long-iso'
 alias lsblk='lsblk -p; echo; lsblk -f'
 alias nl='nl --body-numbering=a --number-format=rn'
 alias partprobe='partprobe -s'
 alias pidof='pidof -x'
 alias restorecon='restorecon -v'
 alias rm='rm --preserve-root --recursive --verbose'
+alias ros2='which -s ros2 || {
+            echo "首次调用 ros2 命令, 正在执行初始化..." &&
+            . /opt/ros/rolling/setup.bash &&
+            . /usr/share/colcon_cd/function/colcon_cd.sh &&
+            export _colcon_cd_root=/opt/ros/rolling &&
+            . /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash &&
+            echo "ROS 2 的相关环境已经成功初始化."
+            }; ros2'
 alias sestatus='sestatus -v'
 alias sudo='sudo '
 alias tar='tar --verbose'
@@ -37,6 +45,16 @@ alias wc='wc --lines --words --chars'
 alias wget='wget --verbose'
 alias xargs='xargs --no-run-if-empty --verbose'
 alias xz='xz -9 --extreme --verbose'  # -9 压缩效果最好; --extreme 压缩效果格外地好.
+
+alias g++-14='g++-14 -std=c++26'
+alias g++-13='g++-13 -std=c++23'
+alias g++-12='g++-12 -std=c++23'
+alias g++-11='g++-11 -std=c++23'
+alias g++-10='g++-10 -std=c++2a'
+alias clang++-19='clang++-19 -std=c++26'
+alias clang++-18='clang++-18 -std=c++26'
+alias clang++-17='clang++-17 --gcc-install-dir=/usr/lib/gcc/x86_64-linux-gnu/13 -std=c++26'
+alias clang++-16='clang++-16 --gcc-install-dir=/usr/lib/gcc/x86_64-linux-gnu/12 -std=c++2b'
 
 shopt -s dotglob   # Filename Expansion 时, 包含隐藏文件.
 shopt -s failglob  # Filename Expansion 时, 若匹配失败则报错.
