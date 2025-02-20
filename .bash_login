@@ -49,7 +49,7 @@ alias clang++-17='clang++-17 --gcc-install-dir=/usr/lib/gcc/x86_64-linux-gnu/13 
 alias clang++-16='clang++-16 --gcc-install-dir=/usr/lib/gcc/x86_64-linux-gnu/12 -std=c++2b'
 
 alias ros2='which -s ros2 || {
-                echo "首次调用 ros2 命令, 正在执行初始化..." &&
+                echo -n "首次调用 ros2 命令, 正在执行初始化... " &&
                 . /opt/ros/rolling/setup.bash &&
                 . /usr/share/colcon_cd/function/colcon_cd.sh &&
                 export _colcon_cd_root=/opt/ros/rolling &&
