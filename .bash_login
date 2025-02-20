@@ -63,6 +63,14 @@ alias ros2='which -s ros2 || {
                     echo
                     echo "注意: 不要在 shell where workspace is built 中 source built overlay!"
                     echo
+                    echo "最小 package 构成:"
+                    echo "  my_package/"
+                    echo "    |__ package.xml          元信息"
+                    echo "    |__ resource/my_package  marker"
+                    echo "    |__ setup.cfg            当包提供 executable 文件时, 用来提示 \`ros2 run\` 来此查找"
+                    echo "    |__ setup.py              INSTALL"
+                    echo "    |__ my_package/__init__.py"
+                    echo
                 }
             }; ros2'
 alias rosdep='ros2 &>/dev/null; rosdep'
