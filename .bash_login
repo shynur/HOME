@@ -60,7 +60,7 @@ alias ros2='which -s ros2 || {
                     echo "  ~/workspace\$'$'\e[01;32m rosdep install \e[0m''-i --from-path src --rosdistro rolling -y  # 安装依赖包"
                     echo "  ~/workspace\$'$'\e[01;32m colcon build \e[0m''--symlink-install\`#无需编译 Python 文件\` --packages-up-to \"按需构建指定的包\""
                     echo "  ~/workspace\$ ros2\`#这是个 alias\` &>/dev/null; . install/local_setup.bash  # 创建 underlay+overlay"
-                    echo "  ~/workspace\$ . install/setup.bash  # 单独的覆盖层"
+                    echo "  ~/workspace\$ . install/setup.bash  # 单一的完整的环境"
                     echo "  ~/workspace/src\$'$'\e[01;32m ros2 pkg create \e[0m''--build-type ament_python --dependencies rclcpp --node-name node1\`#以自动创建一个 hello-world 样板\` --license GPL-3.0-only my_pkg_1"
                     echo "  ~/workspace/src\$'$'\e[01;32m ros2 pkg create \e[0m''--build-type ament_cmake  --dependencies rclcpp --node-name node2                                --license GPL-3.0-only my_pkg_2"
                     echo; sleep 0.3
