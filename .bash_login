@@ -20,7 +20,7 @@ alias grep='grep --extended-regexp --color=always --line-number --with-filename 
 alias gzip='gzip --verbose --best'
 alias info='emacs -Q -f info-standalone'
 alias jobs='jobs -l'
-alias ls='ls -1 --almost-all --author --color=auto --classify --format=verbose --human-readable --size --sort=extension --time-style=long-iso'
+alias ls='ls -1 --color=auto --classify --format=verbose --human-readable --size --sort=extension --time-style=long-iso'
 alias lsblk='lsblk -p; echo; lsblk -f'
 alias nl='nl --body-numbering=a --number-format=rn'
 alias partprobe='partprobe -s'
