@@ -1,6 +1,9 @@
-<!-- Author: 谢骐 <shynur@outlook.com> -->
-
 # SEER Robotics Coding Standards
+
+> Author: 谢骐 \<<shynur@outlook.com>\>  <br />
+> Maintainer: 谢骐  <br />
+> [Raw file](https://raw.githubusercontent.com/shynur/HOME/refs/heads/trunk/Documents/seer-coding-standards.md).
+
 ## 仓库管理
 ### 配置文件
 
@@ -165,7 +168,7 @@ MS-Windows 用户要特别注意不能使用 ‘UTF-8 with BOM’。
 ### 文档注释 [^6]
 
 所有意在给他人使用的 API 必须有文档级别的注释；
-反过来，只要有文档级别的注释，就可以认为该 API 是稳定可使用的。
+反过来，只要有文档级别的注释，就认为该 API 是稳定可使用的。
 
 因此，跟内部实现细节有关的函数或变量等实体，**绝不允许附带文档级注释！**
 只给它们编写常规注释即可。
@@ -208,13 +211,13 @@ MS-Windows 用户要特别注意不能使用 ‘UTF-8 with BOM’。
       int x;
     public:
       auto get_x() const { return this->x; }
-      void set_x(const int x) const { this->x = x; }
+      void set_x(const int x) { this->x = x; }
   };
   class 坏 {
       int x_;
     public:
       auto get_x() const { return x_; }
-      void set_x(const int x) const { x_ = x; }
+      void set_x(const int x) { x_ = x; }
   };
   ```
 
@@ -269,7 +272,7 @@ int main() { A{}; B{}; }         int main() { A{}; B{}; }
 C++ 擅长 AOT 优化，在编译/链接时实施尽可能多的代码分析，若有可能应当把计算提前到编译期。
 除非特别在乎构建时间（对于几十万行的项目，根本不会多花多少时间），否则应当牺牲编译时间换取运行时性能。
 
-LTO 是 C++ 优化的重要主题（特别是在 object 文件很多时效果更加明显），但是往往会占用极大的内存空间，且链接极慢。
+LTO 是 C++ 优化的重要主题（特别是在 object 文件很多时效果更加明显），但往往会占用极大的内存空间，且链接极慢。
 *我们可以通过把实现和声明放在同一份 HPP 文件中，达到和 LTO 相近的效果。*
 
 对于 template，这是天然成立的。
@@ -277,7 +280,7 @@ LTO 是 C++ 优化的重要主题（特别是在 object 文件很多时效果更
 
 ```cpp
 struct [[gnu::weak]] SomeStruct { /* 具体定义 */ };
-void Func [[gnu::weak]] () { /* 具体定义 */ };
+void some_func [[gnu::weak]] () { /* 具体定义 */ };
 ```
 
 `[[gnu::weak]]` 是被 GCC 和 Clang 所支持的属性，属于事实标准。
@@ -291,13 +294,23 @@ void Func [[gnu::weak]] () { /* 具体定义 */ };
 
 注意，API 分两种：
 - 对内 API：意在供仓库内部使用；
-- 对外 API：意在供仓库外部使用。
+- 对外 API：意在供其它项目使用。
 
 #### 注释
 
 **每份文件开头必须包含一段话，讲述该文件的用途。**
-**所有 API 必须附带 Doxygen 风格的注释。**
+例如，
 
+```c
+/*
+ *  MQ Deadline i/o scheduler - adaptation of the legacy deadline scheduler,
+ *  for the blk-mq scheduling framework
+ *
+ *  Copyright (C) 2016 Jens Axboe <axboe@kernel.dk>
+ */
+```
+
+**所有 API 必须附带 Doxygen 风格的注释。**
 class 不光 public 方法和 public 变量要有 Doxygen 注释，class 本身也需要有。
 
 _______________________________________________________________________________
