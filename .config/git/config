@@ -1,0 +1,15 @@
+[user]
+        name = 谢骐
+        email = shynur@outlook.com
+[core]
+        editor = emacs
+[transfer]
+        # fsckObjects = true
+[color]
+        ui = auto
+[init]
+        defaultBranch = trunk
+[alias]
+        log- = log --graph --abbrev-commit
+        merge- = merge --no-ff
+        remote- = remote --verbose

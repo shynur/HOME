@@ -1,0 +1,11 @@
+>>>>>>>>>>>>>>>>>>>> Welcome! >>>>>>>>>>>>>>>>>>>>
+#
+#  \e{lightgreen}\l\e{reset} on \n
+#  IP (maybe incomplete): \e{bold} \4  \6 \e{reset}
+#  It's \e{green}\t\e{reset} on \e{red}\d\e{reset}.  There're \U logged-in.
+#
+#  Distro:  \S for \m
+#           with Linux-v\r
+#           (build \v)
+#
+<<<<<<<<<<<<<<<< issued by agetty <<<<<<<<<<<<<<<<

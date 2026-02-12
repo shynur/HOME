@@ -1,0 +1,55 @@
+set show-all-if-ambiguous on  # 按一次 TAB 就尝试补全, 并列出候选项
+set completion-ignore-case on
+set completion-map-case on    # ignore case 时, 将 '-' 和 '_' 视为等效字符
+set mark-symlinked-directories on
+set colored-completion-prefix on
+set colored-stats on
+set visible-stats on
+
+set blink-matching-paren on
+
+set mark-modified-lines on
+
+
+$if Bash
+"\e\C-f":
+"\e\C-b":
+"\e<":
+"\e>":
+"\ep":
+"\en":
+"\e\C-y":
+"\e_":
+"\C-o":
+#C-v   不知道为什么 C-q 似乎被吞了, 我现在只能用 C-v 了
+"\C-t":
+"\et":
+"\ec":
+#C-x Rubout 咋删?
+"\e\C-d":
+"\e\C-t":
+"\e?":
+"\e*":
+"\e/":
+"\C-x/":
+"\e~":
+"\C-x~":
+"\e$":
+"\C-x$":
+"\e@":
+"\C-x@":
+"\e!":
+"\C-x!":
+"\e{":
+"\C-x(":
+"\C-x)":
+"\C-xe":
+"\er":
+"\e&":
+"\e#":
+"\C-xs":
+"\eg":
+"\C-x*":
+"\C-xg":
+"\e^":
+$endif

@@ -1,0 +1,15 @@
+# -*- mode: sh; -*-
+
+export PS1='[\w/ \#th (\d \@) exited_$?]'$'\n''\$ '
+
+export USERNAME=shynur
+export HOME=C:/$USERNAME/
+
+export "PATH=$PATH;C:/BIN/"
+export "PATH=$PATH;C:/GNU/EMACS/BIN/"
+
+export DJGPP=C:/djdev205/djgpp.env
+
+alias ls='command.com /c dir'
+# `(user-login-name)' evaluates to "dosuser", so
+alias emacs='emacs -u shynur'
