@@ -1,3 +1,8 @@
+if [ $# != 1 ]; then
+    echo "Usage: . $BASH_SOURCE <secrets.json>"
+    return 1
+fi
+
 my_secrets_file=$1
 
 function get-token {
