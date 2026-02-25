@@ -39,7 +39,7 @@ alias xz='xz -9 --extreme --verbose'  # 我都用 xz 了肯定不在乎 CPU 占�
 #alias bzip2='bzip2 --verbose --best'
 #alias chcon='chcon --verbose'
 #alias clang-format='clang-format --Werror -fallback-style=none --ferror-limit=0'
-#alias copilot='GITHUB_TOKEN=<手动填一下> copilot --banner --stream on --enable-all-github-mcp-tools'  # 需要手动填 token.
+alias copilot='copilot --banner --stream on --enable-all-github-mcp-tools'
 #alias cp='cp --interactive --recursive'
 #alias cpio='cpio -c --make-directories --io-size=4096 --verbose'  # -c 使用新型的可移植存储形式.
 #alias dmesg='dmesg --human --color'

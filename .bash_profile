@@ -15,6 +15,9 @@ if [ "$PS1" ] && [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi
 
+export ANTHROPIC_BASE_URL=https://api.aicodemirror.com/api/claudecode
+export GOOGLE_GEMINI_BASE_URL=https://api.aicodemirror.com/api/gemini
+
 # Local Variables:
 # mode: bash
 # coding: utf-8-unix
