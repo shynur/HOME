@@ -4,6 +4,10 @@ if [ $# != 1 ]; then
 fi
 
 my_secrets_file=$1
+if ! [ -f $my_secrets_file ]; then
+    echo 'File does NOT exist'
+    return 1
+fi
 
 function get-token {
     local token_name=$1
