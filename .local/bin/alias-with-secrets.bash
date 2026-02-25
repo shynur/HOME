@@ -20,7 +20,7 @@ with open("'$my_secrets_file'", "r", encoding="utf-8") as f:
 token = data.get("'$token_name'", "")
 print(token)
 '
-    python -c "$py_script"
+    python3 -c "$py_script"
 }
 
 function set-token {
