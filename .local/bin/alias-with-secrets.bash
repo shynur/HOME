@@ -5,7 +5,7 @@ fi
 
 my_secrets_file=$1
 if ! [ -f $my_secrets_file ]; then
-    echo 'File does NOT exist'
+    echo "File '$my_secrets_file' does NOT exist"
     return 1
 fi
 
