@@ -8,3 +8,6 @@ preferred_auth_method = "apikey"
 name = "aicodemirror"
 base_url = "https://api.aicodemirror.com/api/codex/backend-api/codex"
 wire_api = "responses"
+
+[features]
+multi_agent = true
