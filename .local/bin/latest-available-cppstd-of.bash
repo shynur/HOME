@@ -7,6 +7,7 @@ fi
 
 CXX=$1
 
+# 这边 cppstd 的初始值一定要 ＜98
 for ((cppstd=26+30; cppstd>=11; cppstd-=3)); do
     if $CXX -E -std=c++$cppstd <(echo 'int i;') &>/dev/null; then
         echo $cppstd
