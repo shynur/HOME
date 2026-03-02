@@ -4,7 +4,7 @@
 [core]
         editor = emacs
 [transfer]
-        # fsckObjects = true
+        #fsckObjects = true
 [color]
         ui = auto
 [init]
@@ -13,3 +13,5 @@
         log- = log --graph --abbrev-commit
         merge- = merge --no-ff
         remote- = remote --verbose
+[credential]
+        helper = store
