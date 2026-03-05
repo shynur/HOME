@@ -1,5 +1,7 @@
 {
   "model": "opus",
   "language": "中文",
-  "promptSuggestionEnabled": false
+  "promptSuggestionEnabled": false,
+  "effortLevel": "high",
+  "fastMode": true
 }
