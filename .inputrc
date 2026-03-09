@@ -8,7 +8,7 @@ set visible-stats on
 
 set blink-matching-paren on
 
-set mark-modified-lines on
+set mark-modified-lines off  # If enabled, 编辑 history line 时会在行首显示 asterisk 字符.
 
 
 $if Bash
