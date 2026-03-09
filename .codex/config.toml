@@ -3,6 +3,7 @@ model = "gpt-5.4"
 model_reasoning_effort = "xhigh"
 disable_response_storage = true
 preferred_auth_method = "apikey"
+service_tier = "fast"
 
 [model_providers.aicodemirror]
 name = "aicodemirror"
