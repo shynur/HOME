@@ -1,5 +1,5 @@
 {
-  "model": "opus",
+  "model": "opus[1m]",
   "language": "中文",
   "promptSuggestionEnabled": false,
   "effortLevel": "high",
