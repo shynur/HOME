@@ -21,8 +21,3 @@ export GOOGLE_GEMINI_BASE_URL=https://api.aicodemirror.com/api/gemini
 if [ -f ~/.profile.py ]; then
     export PYTHONSTARTUP=~/.profile.py
 fi
-
-# Local Variables:
-# mode: bash
-# coding: utf-8-unix
-# End:
