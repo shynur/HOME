@@ -162,8 +162,3 @@ PROMPT_COMMAND=${PROMPT_COMMAND%;};: ${PROMPT_COMMAND:=:};export PROMPT_COMMAND+
 if which pipx &>/dev/null; then
     eval "$(register-python-argcomplete pipx)"
 fi
-
-# Local Variables:
-# mode: bash
-# coding: utf-8-unix
-# End:
