@@ -16,7 +16,10 @@ jobs:
           fetch-depth: 1
       - name: Update _emacs from Upstream
         run: |
-          git submodule update --init --remote --depth=1 -- .config/emacs
+          git submodule update --init --depth=1 -- .config/emacs
+          cd .config/emacs
+          git fetch --depth=1 origin trunk
+          git checkout origin/trunk
       - name: Commit & Push if Changed
         run: |
           if git diff --quiet -- .config/emacs; then
