@@ -19,7 +19,7 @@ jobs:
           git submodule update --init --depth=1 -- .config/emacs
           cd .config/emacs
           git fetch --depth=1 origin trunk
-          git checkout origin/trunk
+          git checkout FETCH_HEAD
       - name: Commit & Push if Changed
         run: |
           if git diff --quiet -- .config/emacs; then
