@@ -1,0 +1,4 @@
+[submodule ".config/emacs"]
+	path = .config/emacs
+	url = https://github.com/shynur/.emacs.d.git
+	branch = trunk
