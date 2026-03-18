@@ -1,5 +1,9 @@
 {
-	"workbench.startupEditor": "none",
+	"workbench.startupEditor": "readme",
+    "workbench.editor.enablePreview": false,
+    "chat.disableAIFeatures": true,
+
+	"markdown.preview.breaks": false,
 
 	"files.trimTrailingWhitespace": true,
 	"files.insertFinalNewline": true,
@@ -20,7 +24,5 @@
 	"[json]": {
 		"editor.insertSpaces": false,
 		"editor.tabSize": 4
-    },
-
-    "git.autofetch": "all"
+	}
 }
