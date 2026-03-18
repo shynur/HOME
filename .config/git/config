@@ -15,3 +15,6 @@
         remote- = remote --verbose
 [credential]
         helper = store
+[push]
+        default = current
+        autoSetupRemote = true
