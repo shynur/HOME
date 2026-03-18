@@ -20,5 +20,7 @@
 	"[json]": {
 		"editor.insertSpaces": false,
 		"editor.tabSize": 4
-	}
+    },
+
+    "git.autofetch": "all"
 }
