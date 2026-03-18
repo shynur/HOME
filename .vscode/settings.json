@@ -1,0 +1,24 @@
+{
+	"workbench.startupEditor": "none",
+
+	"files.trimTrailingWhitespace": true,
+	"files.insertFinalNewline": true,
+	"files.trimFinalNewlines": true,
+
+	"editor.detectIndentation": false,
+
+	"files.eol": "\n",
+	"files.encoding": "utf8",
+
+	"editor.formatOnSave": false,
+
+	"[yaml]": {
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2
+	},
+
+	"[json]": {
+		"editor.insertSpaces": false,
+		"editor.tabSize": 4
+	}
+}
