@@ -12,10 +12,6 @@ set +o ignoreeof  # (在 .bash_profile 中设置它, 因此仅对 login shell �
 export VISUAL='emacs'
 export GIT_EDITOR=$VISUAL
 
-if [ "$PS1" ] && [ -f ~/.bashrc ]; then
-    . ~/.bashrc
-fi
-
 export ANTHROPIC_BASE_URL=https://api.aicodemirror.com/api/claudecode
 export GOOGLE_GEMINI_BASE_URL=https://api.aicodemirror.com/api/gemini
 
@@ -28,3 +24,9 @@ if [ -f ~/.cargo/env ]; then
 fi
 
 export NVM_DIR=~/.nvm
+
+
+# -----------------------------------------
+if [ "$PS1" ] && [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+fi
