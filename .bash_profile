@@ -22,3 +22,9 @@ export GOOGLE_GEMINI_BASE_URL=https://api.aicodemirror.com/api/gemini
 if [ -f ~/.profile.py ]; then
     export PYTHONSTARTUP=~/.profile.py
 fi
+
+if [ -f ~/.cargo/env ]; then
+    . ~/.cargo/env
+fi
+
+export NVM_DIR=~/.nvm
