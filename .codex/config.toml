@@ -1,6 +1,6 @@
 model_provider = "aicodemirror"
 model = "gpt-5.4"
-model_reasoning_effort = "high"
+model_reasoning_effort = "xhigh"
 disable_response_storage = true
 preferred_auth_method = "apikey"
 approvals_reviewer = "guardian_subagent"
