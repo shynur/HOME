@@ -1,32 +1,25 @@
 name: Auto chmod +x .local/bin/*
 on:
   push:
+    paths:
+      - '.local/bin/*'
 permissions:
   contents: write
 jobs:
-  chmod-local-bin:
-    if: github.ref_type == 'branch'
+  chmod+x:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 1
           submodules: false
-      - name: chmod +x .local/bin/*
+      - name: chmod +x
+        run: chmod +x .local/bin/*
+      - name: Commit & Push
         run: |
-          if ! [ -d .local/bin ]; then
-            exit
-          fi
-          find .local/bin -maxdepth 1 -type f -exec chmod +x {} +
-      - name: Commit & Push if Changed
-        run: |
-          if git diff --quiet -- .local/bin; then
-            echo 'No changes' >&2
-            exit
-          fi
+          git diff --quiet && exit
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add .local/bin
+          git add .local/bin/
           git commit -m '; chore: chmod +x .local/bin/*'
-          git push origin HEAD:${{ github.ref_name }}
+          git push
