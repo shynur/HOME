@@ -1,8 +1,11 @@
 model_provider = "aicodemirror"
 model = "gpt-5.4"
-model_reasoning_effort = "xhigh"
+model_reasoning_effort = "high"
 disable_response_storage = true
 preferred_auth_method = "apikey"
+approvals_reviewer = "guardian_subagent"
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
 service_tier = "fast"
 
 [model_providers.aicodemirror]
@@ -12,3 +15,10 @@ wire_api = "responses"
 
 [features]
 multi_agent = true
+guardian_approval = true
+
+[notice]
+hide_full_access_warning = true
+
+[tui]
+status_line = ["model-with-reasoning", "current-dir", "git-branch", "context-used", "total-input-tokens", "total-output-tokens", "fast-mode"]
