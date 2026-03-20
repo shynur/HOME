@@ -1,10 +1,64 @@
 {
-  "model": {
-    "name": "gemini-3.1-pro-preview-customtools"
-  },
-  "security": {
-    "auth": {
-      "selectedType": "gemini-api-key"
+    "model": {
+        "name": "gemini-3.1-pro-preview-customtools"
+    },
+    "security": {
+        "auth": {
+            "selectedType": "gemini-api-key"
+        },
+        "environmentVariableRedaction": {
+            "enabled": true
+        }
+    },
+    "general": {
+        "preferredEditor": "emacs",
+        "defaultApprovalMode": "auto_edit",
+        "enableNotifications": true,
+        "plan": {
+            "modelRouting": false
+        },
+        "enableAutoUpdate": false
+    },
+    "ui": {
+        "footer": {
+            "showLabels": false,
+            "items": [
+                "model-name",
+                "workspace",
+                "git-branch",
+                "code-changes",
+                "context-used",
+                "token-count"
+            ]
+        },
+        "hideWindowTitle": false,
+        "showStatusInTitle": true,
+        "dynamicWindowTitle": true,
+        "showHomeDirectoryWarning": true,
+        "showCompatibilityWarnings": true,
+        "hideBanner": true,
+        "showSpinner": true,
+        "loadingPhrases": "all",
+        "hideTips": true,
+        "showShortcutsHint": false
+    },
+    "context": {
+        "fileFiltering": {
+            "respectGitIgnore": false,
+            "respectGeminiIgnore": true,
+            "enableRecursiveFileSearch": true,
+            "enableFuzzySearch": true
+        }
+    },
+    "tools": {
+        "shell": {
+            "showColor": true
+        }
+    },
+    "advanced": {
+        "autoConfigureMemory": true
+    },
+    "hooksConfig": {
+        "notifications": true
     }
-  }
 }
