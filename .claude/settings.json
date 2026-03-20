@@ -2,5 +2,6 @@
   "model": "opus[1m]",
   "language": "中文",
   "effortLevel": "high",
+  "promptSuggestionEnabled": false,
   "fastMode": true
 }
