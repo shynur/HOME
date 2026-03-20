@@ -16,9 +16,17 @@ wire_api = "responses"
 [features]
 multi_agent = true
 guardian_approval = true
+js_repl = true
 
 [notice]
 hide_full_access_warning = true
 
 [tui]
 status_line = ["model-with-reasoning", "current-dir", "git-branch", "context-used", "total-input-tokens", "total-output-tokens", "fast-mode"]
+
+[projects."/root/ws/HOME"]
+trust_level = "trusted"
+
+[[skills.config]]
+path = "/root/.codex/skills/.system/openai-docs/SKILL.md"
+enabled = false
