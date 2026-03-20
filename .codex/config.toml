@@ -5,7 +5,7 @@ disable_response_storage = true
 preferred_auth_method = "apikey"
 approvals_reviewer = "guardian_subagent"
 approval_policy = "on-request"
-sandbox_mode = "workspace-write"
+sandbox_mode = "danger-full-access"
 service_tier = "fast"
 
 [model_providers.aicodemirror]
