@@ -3,12 +3,12 @@
 
 !/bin/
 /bin/*
-!/alias-with-secrets.bash
-!/hurry-ssh.vbs
-!/kill-pattern.bash
-!/latest-available-cppstd-of.bash
-!/PDF_downloader.py
-!/stop-watch.js
-!/webm2HEVC.ps1
-!/chmod-x-useless.bash
-!/s2qr.js
+!/bin/alias-with-secrets.bash
+!/bin/hurry-ssh.vbs
+!/bin/kill-pattern.bash
+!/bin/latest-available-cppstd-of.bash
+!/bin/PDF_downloader.py
+!/bin/stop-watch.js
+!/bin/webm2HEVC.ps1
+!/bin/chmod-x-useless.bash
+!/bin/s2qr.js
