@@ -6,7 +6,7 @@ on:
 permissions:
   contents: write
 jobs:
-  chmod+x:
+  chmod-add-x:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
