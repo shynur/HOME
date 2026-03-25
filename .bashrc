@@ -170,3 +170,8 @@ if [ -s $NVM_DIR/nvm.sh ]; then
     fi
     . <(npm completion)
 fi
+
+if which rustup &>/dev/null; then
+    . <(rustup completions bash)
+    . <(rustup completions bash cargo)
+fi
