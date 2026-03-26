@@ -59,7 +59,7 @@ alias xz='xz -9 --extreme --verbose'  # 我都用 xz 了肯定不在乎 CPU 占�
 #alias wget='wget --verbose'
 #alias xargs='xargs --no-run-if-empty --verbose'
 
-alias emacs=$VISUAL
+alias emacs='emacsclient -alternate-editor= -create-frame -quiet --'
 alias nvim=emacs
 alias vim=emacs
 
