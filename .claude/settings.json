@@ -3,5 +3,7 @@
   "language": "中文",
   "effortLevel": "high",
   "promptSuggestionEnabled": false,
-  "fastMode": true
+  "fastMode": true,
+  "autoMemoryEnabled": false,
+  "autoDreamEnabled": true
 }
