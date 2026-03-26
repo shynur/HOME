@@ -29,11 +29,8 @@ alias htop='nice -n 99 htop'
 alias jobs='jobs -l'  # 额外打印 PID.
 alias ls='ls -1 --color=auto --classify --format=verbose --human-readable --size --sort=extension --time-style=long-iso'
 alias mkdir='mkdir -p'
-alias nano=emacs
-alias nvim=emacs
 alias sudo='sudo '
 alias top='nice -n 99 top'
-alias vim=emacs
 alias xz='xz -9 --extreme --verbose'  # 我都用 xz 了肯定不在乎 CPU 占用了, 直接最高压缩率走起.
 #alias bc='bc --warn'
 #alias bzip2='bzip2 --verbose --best'
@@ -61,6 +58,10 @@ alias xz='xz -9 --extreme --verbose'  # 我都用 xz 了肯定不在乎 CPU 占�
 #alias wc='wc --lines --words --chars'
 #alias wget='wget --verbose'
 #alias xargs='xargs --no-run-if-empty --verbose'
+
+alias emacs=$VISUAL
+alias nvim=emacs
+alias vim=emacs
 
 if false; then  # 暂时没有用 ros 的需求.  而且这玩意 API/usage 也一直在变.
     alias ros2='which -s ros2 || {
