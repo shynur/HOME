@@ -22,7 +22,7 @@ js_repl = true
 hide_full_access_warning = true
 
 [tui]
-status_line = ["model-with-reasoning", "current-dir", "git-branch", "context-used", "total-input-tokens", "total-output-tokens", "fast-mode"]
+status_line = ["model-with-reasoning", "current-dir", "git-branch", "context-remaining", "total-input-tokens", "total-output-tokens", "fast-mode"]
 
 [[skills.config]]
 path = "/root/.codex/skills/.system/openai-docs/SKILL.md"
