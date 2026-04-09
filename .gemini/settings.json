@@ -25,7 +25,6 @@
             "items": [
                 "model-name",
                 "workspace",
-                "git-branch",
                 "code-changes",
                 "context-used",
                 "token-count"
