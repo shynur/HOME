@@ -1,7 +1,7 @@
 {
   "model": "opus[1m]",
   "language": "中文",
-  "effortLevel": "high",
+  "effortLevel": "max",
   "promptSuggestionEnabled": false,
   "fastMode": true,
   "autoMemoryEnabled": false,
