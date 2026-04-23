@@ -1,11 +1,8 @@
 {
     "model": {
-        "name": "gemini-3.1-pro-preview-customtools"
+        "name": "gemini-3.1-pro-preview"
     },
     "security": {
-        "auth": {
-            "selectedType": "gemini-api-key"
-        },
         "environmentVariableRedaction": {
             "enabled": true
         }
@@ -17,7 +14,7 @@
         "plan": {
             "modelRouting": false
         },
-        "enableAutoUpdate": false
+        "enableAutoUpdate": true
     },
     "ui": {
         "footer": {
@@ -28,18 +25,20 @@
                 "code-changes",
                 "context-used",
                 "token-count"
-            ]
+            ],
+            "hideContextPercentage": false
         },
         "hideWindowTitle": false,
         "showStatusInTitle": true,
         "dynamicWindowTitle": true,
-        "showHomeDirectoryWarning": true,
-        "showCompatibilityWarnings": true,
         "hideBanner": true,
         "showSpinner": true,
-        "loadingPhrases": "all",
         "hideTips": true,
-        "showShortcutsHint": false
+        "showShortcutsHint": false,
+        "inlineThinkingMode": "full",
+        "showModelInfoInChat": true,
+        "showUserIdentity": false,
+        "loadingPhrases": "all"
     },
     "context": {
         "fileFiltering": {
@@ -53,9 +52,6 @@
         "shell": {
             "showColor": true
         }
-    },
-    "advanced": {
-        "autoConfigureMemory": true
     },
     "hooksConfig": {
         "notifications": true
