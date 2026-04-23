@@ -38,7 +38,7 @@
         "inlineThinkingMode": "full",
         "showModelInfoInChat": true,
         "showUserIdentity": false,
-        "loadingPhrases": "all"
+        "loadingPhrases": "off"
     },
     "context": {
         "fileFiltering": {
