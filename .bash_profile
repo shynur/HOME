@@ -1,4 +1,4 @@
-export LANG=en_US.UTF-8  # 否则 Emacs TUI 在 container 里无法显示 汉字.  WHY?
+export LANG=C.UTF-8  # 留空值的话, Emacs TUI 在 container 里无法显示 汉字.  WHY?
 export LESSCHARSET=utf8  # 否则 `git diff` 显示不了汉字.  WHY?  LESSCHARSET 不是会默认使用 LANG 值吗?
 
 export PATH+=:~/.local/bin  # pipx 会把可执行文件安装到此处.
