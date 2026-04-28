@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -euo pipefail
+
+go install github.com/shynur/wbcommander@latest
+rm $0
+exec wbcommander "$@"
