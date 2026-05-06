@@ -20,6 +20,7 @@ wire_api = "responses"
 multi_agent = true
 guardian_approval = true
 js_repl = true
+prevent_idle_sleep = true
 
 [notice]
 hide_full_access_warning = true
