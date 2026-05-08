@@ -26,7 +26,8 @@ prevent_idle_sleep = true
 hide_full_access_warning = true
 
 [tui]
-status_line = ["model-with-reasoning", "current-dir", "context-remaining", "total-input-tokens", "total-output-tokens", "fast-mode", "task-progress"]
+status_line = ["model-with-reasoning", "current-dir", "branch-changes", "context-remaining", "total-input-tokens", "total-output-tokens", "fast-mode", "task-progress"]
+status_line_use_colors = true
 
 [[skills.config]]
 path = "/root/.codex/skills/.system/openai-docs/SKILL.md"
