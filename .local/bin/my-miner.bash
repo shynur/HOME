@@ -9,13 +9,18 @@ fi
 if ! which curl &>/dev/null; then
     sudo apt install -y curl
 fi
-if ! which wget &>/dev/null; then
-    sudo apt install -y wget
-fi
 if ! which mihomo &>/dev/null; then
     (cd `mktemp -d`
-     wget https://github.com/MetaCubeX/mihomo/releases/download/v1.19.25/mihomo-linux-amd64-v3-v1.19.25.deb
-     sudo apt install -y mihomo*.deb)
+     if ! which wget &>/dev/null; then
+         sudo apt install -y wget
+     fi
+     wget https://github.com/MetaCubeX/mihomo/releases/download/v1.19.25/mihomo-linux-`[ $HOSTTYPE = x86_64 ] && echo amd64 || echo arm64`-v1.19.25.gz
+     if ! which gzip &>/dev/null; then
+         sudo apt install -y gzip
+     fi
+     gzip -d mihomo*.gz
+     mv mihomo* mihomo
+     sudo mv mihomo /usr/local/bin/)
 fi
 #-----------------------------
 
