@@ -6,6 +6,5 @@
   "fastMode": false,
   "autoMemoryEnabled": false,
   "autoDreamEnabled": true,
-  "useAutoModeDuringPlan": false,
   "theme": "dark"
 }
