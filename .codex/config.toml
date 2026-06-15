@@ -8,8 +8,8 @@ approvals_reviewer = "guardian_subagent"
 approval_policy = "on-request"
 sandbox_mode = "danger-full-access"
 service_tier = "fast"
-model_context_window = 1000000
-model_auto_compact_token_limit = 258000
+#model_context_window = 1000000
+#model_auto_compact_token_limit = 258000
 
 [model_providers.aicodemirror]
 name = "aicodemirror"
