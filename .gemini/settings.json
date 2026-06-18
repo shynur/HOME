@@ -8,7 +8,7 @@
         }
     },
     "general": {
-        "preferredEditor": "emacs",
+        "preferredEditor": "emacsclient",
         "defaultApprovalMode": "auto_edit",
         "enableNotifications": true,
         "plan": {
