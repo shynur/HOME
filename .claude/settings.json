@@ -6,5 +6,6 @@
   "fastMode": false,
   "autoMemoryEnabled": false,
   "autoDreamEnabled": true,
-  "theme": "dark"
+  "theme": "dark",
+  "skipWebFetchPreflight": true
 }
