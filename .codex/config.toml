@@ -13,7 +13,7 @@ service_tier = "fast"
 
 [model_providers.aicodemirror]
 name = "aicodemirror"
-base_url = "https://api.aicodemirror.com/api/codex/backend-api/codex"
+base_url = "https://api-sp.claudecode.net.cn/api/codex/backend-api/codex"
 wire_api = "responses"
 
 [features]
