@@ -6,6 +6,7 @@
 !/.inputrc
 !/.npmrc
 !/.profile.py
+!/.claude.json
 
 !/.claude/
 !/.codex/
