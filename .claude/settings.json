@@ -1,11 +1,13 @@
 {
   "model": "opus[1m]",
-  "language": "中文",
+  "language": "Chinese",
+  "skipWebFetchPreflight": true,
   "effortLevel": "xhigh",
   "promptSuggestionEnabled": false,
-  "fastMode": false,
+  "askUserQuestionTimeout": "10m",
   "autoMemoryEnabled": false,
   "autoDreamEnabled": true,
   "theme": "light",
-  "skipWebFetchPreflight": true
+  "autoCompactEnabled": true,
+  "fileCheckpointingEnabled": true
 }
