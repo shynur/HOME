@@ -26,11 +26,12 @@ prevent_idle_sleep = true
 hide_full_access_warning = true
 
 [tui]
-status_line = ["model-with-reasoning", "branch-changes", "context-remaining", "total-input-tokens", "total-output-tokens", "task-progress"]
+status_line = ["model-with-reasoning", "task-progress", "branch-changes", "total-input-tokens", "total-output-tokens", "context-remaining"]
 status_line_use_colors = true
 terminal_title = ["activity", "current-dir", "git-branch"]
 
 [tui.model_availability_nux]
+"gpt-5.5" = 1
 "gpt-5.6-sol" = 4
 
 [[skills.config]]
