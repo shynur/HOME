@@ -1,10 +1,10 @@
 model_provider = "aicodemirror"
-model = "gpt-5.5"
-model_reasoning_effort = "xhigh"
+model = "gpt-5.6-sol"
+model_reasoning_effort = "ultra"
 plan_mode_reasoning_effort = "xhigh"
 disable_response_storage = true
 preferred_auth_method = "apikey"
-approvals_reviewer = "guardian_subagent"
+approvals_reviewer = "user"
 approval_policy = "on-request"
 sandbox_mode = "danger-full-access"
 service_tier = "fast"
@@ -26,8 +26,12 @@ prevent_idle_sleep = true
 hide_full_access_warning = true
 
 [tui]
-status_line = ["model-with-reasoning", "current-dir", "branch-changes", "context-remaining", "total-input-tokens", "total-output-tokens", "fast-mode", "task-progress"]
+status_line = ["model-with-reasoning", "branch-changes", "context-remaining", "total-input-tokens", "total-output-tokens", "task-progress"]
 status_line_use_colors = true
+terminal_title = ["activity", "current-dir", "git-branch"]
+
+[tui.model_availability_nux]
+"gpt-5.6-sol" = 4
 
 [[skills.config]]
 path = "/root/.codex/skills/.system/openai-docs/SKILL.md"
@@ -66,4 +70,10 @@ trust_level = "trusted"
 [projects."/root/Documents/PowerShell"]
 trust_level = "trusted"
 [projects."/root/Music"]
+trust_level = "trusted"
+
+[projects."/tmp"]
+trust_level = "trusted"
+
+[projects."/root"]
 trust_level = "trusted"
