@@ -9,5 +9,6 @@
   "autoDreamEnabled": true,
   "theme": "light",
   "autoCompactEnabled": true,
-  "fileCheckpointingEnabled": true
+  "fileCheckpointingEnabled": true,
+  "askUserQuestionTimeout": "never"
 }
