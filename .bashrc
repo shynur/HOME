@@ -153,8 +153,10 @@ set +o notify  # 否则, 经常出现下一个 PS1 打印出来后, 突然冒出
 ulimit -c $[20*1024*1024/512]  # 允许 20MiB 大小的 coredump file.
 
 # 打开小键盘的 NumLock 指示灯.
-if which setleds &>/dev/null; then
-    setleds -v -D +num  # '-v': 显示修改后的状态.  '-D': 同时修改 键盘的 LED 灯 和 实际状态.
+if [ `uname` = Linux ] && [[ `tty` =~ /dev/tty[0-9]+ ]]; then
+    if which setleds &>/dev/null; then
+        setleds -v -D +num  # '-v': 显示修改后的状态.  '-D': 同时修改 键盘的 LED 灯 和 实际状态.
+    fi
 fi
 
 HISTCONTROL+=:ignoredups
