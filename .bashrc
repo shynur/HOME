@@ -109,7 +109,7 @@ if false; then  # 暂时没有用 ros 的需求.  而且这玩意 API/usage 也�
     alias colcon='ros2 &>/dev/null; colcon'
 fi
 
-which fzf &>/dev/null; then
+if which fzf &>/dev/null; then
     function fzf_insert_path {
         local FZF_DEFAULT_OPTS
         FZF_DEFAULT_OPTS="--height=60% --layout=reverse --preview 'batcat --style=numbers --color=always {}'"
