@@ -27,6 +27,6 @@ export NVM_DIR=~/.nvm
 
 
 # -----------------------------------------
-if [ "$PS1" ] && [ -f ~/.bashrc ]; then
+if [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi
