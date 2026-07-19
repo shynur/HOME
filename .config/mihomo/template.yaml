@@ -1,0 +1,84 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: warning
+ipv6: false
+unified-delay: true
+tcp-concurrent: true
+
+geo-auto-update: true
+geo-update-interval: 24
+
+profile:
+  store-selected: true
+  store-fake-ip: true
+
+sniffer:
+  enable: true
+  sniff:
+    HTTP:
+      ports: [80, 8080-8880]
+      override-destination: true
+    TLS:
+      ports: [443, 8443]
+    QUIC:
+      ports: [443, 8443]
+  skip-domain:
+    - "+.push.apple.com"
+
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - "*.local"
+    - "+.msftconnecttest.com"
+    - "+.msftncsi.com"
+    - "time.*.com"
+    - "ntp.*.com"
+    - "+.stun.*.*"
+  default-nameserver:
+    - 223.5.5.5
+    - 1.1.1.1
+  proxy-server-nameserver:
+    - https://223.5.5.5/dns-query
+  nameserver:
+    - https://223.5.5.5/dns-query
+    - "https://1.1.1.1/dns-query#PROXY"
+  nameserver-policy:
+    "geosite:cn,private":
+      - https://223.5.5.5/dns-query
+    "geosite:geolocation-!cn":
+      - "https://1.1.1.1/dns-query#PROXY"
+
+proxies:
+  - name: "@NAME@"
+    type: vless
+    server: @SERVER@
+    port: @PORT@
+    uuid: @UUID@
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: @SERVERNAME@
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: @PUBLIC_KEY@
+      short-id: "@SHORT_ID@"
+
+proxy-groups:
+  - name: "PROXY"
+    type: select
+    proxies:
+      - "@NAME@"
+      - DIRECT
+
+rules:
+  - GEOSITE,private,DIRECT
+  - GEOSITE,cn,DIRECT
+  - GEOIP,LAN,DIRECT,no-resolve
+  - GEOIP,CN,DIRECT
+  - MATCH,PROXY
