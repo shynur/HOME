@@ -10,5 +10,5 @@ BASE_URL=https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest
 mkdir -p "$DEST_DIR"
 
 for file in country.mmdb geosite.dat; do
-    wget -O "$DEST_DIR/$file" "$BASE_URL/$file"
+    wget -q -O "$DEST_DIR/$file" "$BASE_URL/$file"
 done
