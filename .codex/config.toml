@@ -5,7 +5,7 @@ plan_mode_reasoning_effort = "xhigh"
 disable_response_storage = true
 preferred_auth_method = "apikey"
 approvals_reviewer = "user"
-approval_policy = "on-request"
+approval_policy = "never"
 sandbox_mode = "danger-full-access"
 service_tier = "fast"
 #model_context_window = 1000000
@@ -42,6 +42,12 @@ path = "/root/.codex/skills/.system/plugin-creator/SKILL.md"
 enabled = false
 [[skills.config]]
 path = "/root/.codex/skills/.system/skill-creator/SKILL.md"
+enabled = false
+[[skills.config]]
+path = "/root/.codex/skills/.system/imagegen/SKILL.md"
+enabled = false
+[[skills.config]]
+path = "/root/.codex/skills/.system/skill-installer/SKILL.md"
 enabled = false
 
 [projects."/root/.claude"]
