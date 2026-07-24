@@ -5,9 +5,9 @@ log-level: warning
 ipv6: false
 unified-delay: true
 tcp-concurrent: true
-
 geo-auto-update: true
 geo-update-interval: 24
+find-process-mode: always
 
 profile:
   store-selected: true
@@ -77,6 +77,8 @@ proxy-groups:
       - DIRECT
 
 rules:
+  - PROCESS-NAME,ToDesk.exe,DIRECT
+  - DOMAIN-SUFFIX,todesk.com,DIRECT
   - GEOSITE,private,DIRECT
   - GEOSITE,cn,DIRECT
   - GEOIP,LAN,DIRECT,no-resolve
