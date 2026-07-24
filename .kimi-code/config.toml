@@ -1,0 +1,20 @@
+default_model = "bailian/kimi-k3"
+default_permission_mode = "auto"
+
+[providers.bailian]
+type = "openai"
+base_url = "https://dashscope.aliyuncs.com/compatible-mode/v1"
+
+[models."bailian/kimi-k3"]
+provider = "bailian"
+model = "kimi/kimi-k3"
+max_context_size = 1048576
+capabilities = [ "thinking", "always_thinking", "image_in", "video_in", "tool_use" ]
+display_name = "K3"
+support_efforts = [ "max" ]
+default_effort = "max"
+
+[thinking]
+enabled = true
+effort = "max"
+keep = "all"
