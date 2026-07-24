@@ -58,3 +58,7 @@ fi
 if set-token GEMINI_API_KEY; then
     alias gemini="GEMINI_API_KEY=$GEMINI_API_KEY gemini"
 fi
+
+if set-token KIMI_ALIBABA_BAILIAN_API_KEY; then
+     sed -i '/^[[:blank:]]*\[providers\.bailian][[:blank:]]*$/a api_key="'$KIMI_ALIBABA_BAILIAN_API_KEY'"' ~/.kimi-code/config.toml
+fi
