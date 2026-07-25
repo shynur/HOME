@@ -60,5 +60,5 @@ if set-token GEMINI_API_KEY; then
 fi
 
 if set-token KIMI_ALIBABA_BAILIAN_API_KEY; then
-    sed -i '/^[[:blank:]]*\[providers\.bailian][[:blank:]]*$/a api_key="'$KIMI_ALIBABA_BAILIAN_API_KEY'"' ~/.kimi-code/config.toml
+    sed -i '/^[[:blank:]]*\[providers\.bailian][[:blank:]]*$/a api_key = "'$KIMI_ALIBABA_BAILIAN_API_KEY'"' ~/.kimi-code/config.toml
 fi
