@@ -4,7 +4,6 @@
   "skipWebFetchPreflight": true,
   "effortLevel": "xhigh",
   "promptSuggestionEnabled": false,
-  "askUserQuestionTimeout": "10m",
   "autoMemoryEnabled": false,
   "autoDreamEnabled": true,
   "theme": "light",
