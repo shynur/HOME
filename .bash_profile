@@ -12,7 +12,7 @@ set +o ignoreeof  # (在 .bash_profile 中设置它, 因此仅对 login shell �
 export VISUAL='emacsclient -alternate-editor= -create-frame -quiet --'
 export GIT_EDITOR=$VISUAL
 
-export ANTHROPIC_BASE_URL=https://api-sp.claudecode.net.cn/api/claudecode
+export ANTHROPIC_BASE_URL=https://llmapi.pro  # https://api-sp.claudecode.net.cn/api/claudecode
 export GOOGLE_GEMINI_BASE_URL=https://api-sp.claudecode.net.cn/api/gemini
 
 if [ -f ~/.profile.py ]; then
