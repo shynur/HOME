@@ -1,18 +1,53 @@
-default_model = "bailian/kimi-k3"
+default_model = "alibaba-cn/kimi-k3"
 default_permission_mode = "auto"
 
-[providers.bailian]
+[providers.alibaba-cn]
 type = "openai"
 base_url = "https://dashscope.aliyuncs.com/compatible-mode/v1"
 
-[models."bailian/kimi-k3"]
-provider = "bailian"
+[models."alibaba-cn/kimi-k3"]
+provider = "alibaba-cn"
 model = "kimi/kimi-k3"
 max_context_size = 1048576
 capabilities = [ "thinking", "always_thinking", "image_in", "video_in", "tool_use" ]
 display_name = "K3"
 support_efforts = [ "low", "high", "max" ]
 default_effort = "max"
+
+[models."alibaba-cn/glm-5.2"]
+provider = "alibaba-cn"
+model = "glm-5.2"
+max_context_size = 1000000
+max_output_size = 128000
+capabilities = [ "thinking", "tool_use" ]
+display_name = "GLM-5.2"
+reasoning_key = "reasoning_content"
+
+[models."alibaba-cn/qwen3.8-max"]
+provider = "alibaba-cn"
+model = "qwen3.8-max"
+max_context_size = 1000000
+max_output_size = 65536
+capabilities = [ "thinking", "tool_use" ]
+display_name = "Qwen3.8 Max"
+
+[models."alibaba-cn/deepseek-v4-pro"]
+provider = "alibaba-cn"
+model = "deepseek-v4-pro"
+max_context_size = 1000000
+max_output_size = 384000
+capabilities = [ "thinking", "tool_use" ]
+display_name = "DeepSeek V4 Pro"
+reasoning_key = "reasoning_content"
+support_efforts = [ "high", "max" ]
+
+[models."alibaba-cn/MiniMax/MiniMax-M3"]
+provider = "alibaba-cn"
+model = "MiniMax/MiniMax-M3"
+max_context_size = 1000000
+max_output_size = 131072
+capabilities = [ "thinking", "tool_use" ]
+display_name = "MiniMax-M3"
 
 [thinking]
 enabled = true
