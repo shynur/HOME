@@ -60,7 +60,7 @@ if set-token GEMINI_API_KEY; then
 fi
 
 if set-token KIMI_ALIBABA_BAILIAN_API_KEY; then
-    if ! grep -Pzq '(?m)^[[:blank:]]*\[providers\.bailian\][[:blank:]]*\napi_key = "[^"]+"$' ~/.kimi-code/config.toml; then
-        sed -i '/^[[:blank:]]*\[providers\.bailian][[:blank:]]*$/a api_key = "'$KIMI_ALIBABA_BAILIAN_API_KEY'"' ~/.kimi-code/config.toml
+    if ! grep -Pzq '(?m)^[[:blank:]]*\[providers\.alibaba-cn\][[:blank:]]*\napi_key = "[^"]+"$' ~/.kimi-code/config.toml; then
+        sed -i '/^[[:blank:]]*\[providers\.alibaba-cn][[:blank:]]*$/a api_key = "'$KIMI_ALIBABA_BAILIAN_API_KEY'"' ~/.kimi-code/config.toml
     fi
 fi
