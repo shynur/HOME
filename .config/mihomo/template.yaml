@@ -79,6 +79,7 @@ proxy-groups:
 rules:
   - PROCESS-NAME,ToDesk.exe,DIRECT
   - DOMAIN-SUFFIX,todesk.com,DIRECT
+  - DOMAIN-SUFFIX,bing.com,DIRECT
   - GEOSITE,private,DIRECT
   - GEOSITE,cn,DIRECT
   - GEOIP,LAN,DIRECT,no-resolve
