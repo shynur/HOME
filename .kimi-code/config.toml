@@ -45,8 +45,11 @@ support_efforts = [ "high", "max" ]
 provider = "alibaba-cn"
 model = "deepseek-v4-flash"
 max_context_size = 1000000
+max_output_size = 384000
 capabilities = [ "thinking", "tool_use" ]
 display_name = "DeepSeek V4 Flash"
+reasoning_key = "reasoning_content"
+support_efforts = [ "high", "max" ]
 
 [models."alibaba-cn/MiniMax/MiniMax-M3"]
 provider = "alibaba-cn"
