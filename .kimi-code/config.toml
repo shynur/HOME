@@ -1,5 +1,6 @@
 default_model = "alibaba-cn/kimi-k3"
 default_permission_mode = "auto"
+telemetry = false
 
 [providers.alibaba-cn]
 type = "openai"
