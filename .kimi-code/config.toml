@@ -39,6 +39,7 @@ max_context_size = 1048576
 capabilities = [ "thinking", "always_thinking", "image_in", "video_in", "tool_use" ]
 display_name = "K3"
 support_efforts = [ "low", "high", "max" ]
+default_effort = "max"
 
 [models."alibaba-cn/deepseek-v4-flash"]
 provider = "alibaba-cn"
@@ -49,6 +50,7 @@ capabilities = [ "thinking", "tool_use" ]
 display_name = "DeepSeek V4 Flash"
 reasoning_key = "reasoning_content"
 support_efforts = [ "high", "max" ]
+default_effort = "max"
 
 [models."alibaba-cn/glm-5.2"]
 provider = "alibaba-cn"
@@ -76,6 +78,7 @@ capabilities = [ "thinking", "tool_use" ]
 display_name = "DeepSeek V4 Pro"
 reasoning_key = "reasoning_content"
 support_efforts = [ "high", "max" ]
+default_effort = "max"
 
 [models."alibaba-cn/MiniMax/MiniMax-M3"]
 provider = "alibaba-cn"
@@ -111,6 +114,7 @@ max_input_size = 922000
 capabilities = [ "image_in", "thinking", "tool_use" ]
 display_name = "GPT-5.6 Sol"
 support_efforts = [ "low", "medium", "high", "xhigh", "max" ]
+default_effort = "max"
 off_effort = "none"
 
 [models."openai/gpt-5.6-terra"]
@@ -121,6 +125,7 @@ max_input_size = 922000
 capabilities = [ "image_in", "thinking", "tool_use" ]
 display_name = "GPT-5.6 Terra"
 support_efforts = [ "low", "medium", "high", "xhigh", "max" ]
+default_effort = "max"
 off_effort = "none"
 
 [models."openai/gpt-5.6-luna"]
@@ -131,6 +136,7 @@ max_input_size = 922000
 capabilities = [ "image_in", "thinking", "tool_use" ]
 display_name = "GPT-5.6 Luna"
 support_efforts = [ "low", "medium", "high", "xhigh", "max" ]
+default_effort = "max"
 off_effort = "none"
 
 [models."anthropic/claude-fable-5"]
@@ -140,6 +146,7 @@ max_context_size = 1000000
 capabilities = [ "image_in", "thinking", "tool_use" ]
 display_name = "Claude Fable 5"
 support_efforts = [ "low", "medium", "high", "xhigh", "max" ]
+default_effort = "max"
 
 [models."anthropic/claude-opus-5"]
 provider = "anthropic"
@@ -148,6 +155,7 @@ max_context_size = 1000000
 capabilities = [ "image_in", "thinking", "tool_use" ]
 display_name = "Claude Opus 5"
 support_efforts = [ "low", "medium", "high", "xhigh", "max" ]
+default_effort = "max"
 
 [models."anthropic/claude-sonnet-5"]
 provider = "anthropic"
@@ -156,3 +164,4 @@ max_context_size = 1000000
 capabilities = [ "image_in", "thinking", "tool_use" ]
 display_name = "Claude Sonnet 5"
 support_efforts = [ "low", "medium", "high", "xhigh", "max" ]
+default_effort = "max"
