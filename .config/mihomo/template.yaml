@@ -80,6 +80,7 @@ rules:
   - PROCESS-NAME,ToDesk.exe,DIRECT
   - DOMAIN-SUFFIX,todesk.com,DIRECT
   - DOMAIN-SUFFIX,bing.com,DIRECT
+  - DOMAIN-SUFFIX,gnu.org,DIRECT    # gnu.org 把我的 server 的 IP 给🈲掉了, 令人发指
   - GEOSITE,private,DIRECT
   - GEOSITE,cn,DIRECT
   - GEOIP,LAN,DIRECT,no-resolve
