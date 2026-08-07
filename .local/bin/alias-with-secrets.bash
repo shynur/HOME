@@ -48,19 +48,28 @@ else
 fi
 if [ "$ANTHROPIC_API_KEY" ]; then
     alias claude="ANTHROPIC_API_KEY=$ANTHROPIC_API_KEY ANTHROPIC_AUTH_TOKEN=$ANTHROPIC_AUTH_TOKEN claude"
+    if ! grep -Pzq '(?m)^[[:blank:]]*\[providers\.llmapipro-claude\][[:blank:]]*\napi_key = "[^"]+"$' ~/.kimi-code/config.toml; then
+        sed -i '/^[[:blank:]]*\[providers\.llmapipro-claude][[:blank:]]*$/a api_key="'$ANTHROPIC_API_KEY'"' ~/.kimi-code/config.toml
+    fi
 fi
 
 if set-token OPENAI_API_KEY; then
     mkdir -p ~/.codex
     echo "{ \"OPENAI_API_KEY\" : \"$OPENAI_API_KEY\" }" >|~/.codex/auth.json
+    if ! grep -Pzq '(?m)^[[:blank:]]*\[providers\.aicodemirror-gpt\][[:blank:]]*\napi_key = "[^"]+"$' ~/.kimi-code/config.toml; then
+        sed -i '/^[[:blank:]]*\[providers\.aicodemirror-gpt][[:blank:]]*$/a api_key="'$OPENAI_API_KEY'"' ~/.kimi-code/config.toml
+    fi
 fi
 
 if set-token GEMINI_API_KEY; then
     alias gemini="GEMINI_API_KEY=$GEMINI_API_KEY gemini"
+    if ! grep -Pzq '(?m)^[[:blank:]]*\[providers\.aicodemirror-gemini\][[:blank:]]*\napi_key = "[^"]+"$' ~/.kimi-code/config.toml; then
+        sed -i '/^[[:blank:]]*\[providers\.aicodemirror-gemini][[:blank:]]*$/a api_key="'$GEMINI_API_KEY'"' ~/.kimi-code/config.toml
+    fi
 fi
 
 if set-token KIMI_ALIBABA_BAILIAN_API_KEY; then
     if ! grep -Pzq '(?m)^[[:blank:]]*\[providers\.alibaba-cn\][[:blank:]]*\napi_key = "[^"]+"$' ~/.kimi-code/config.toml; then
-        sed -i '/^[[:blank:]]*\[providers\.alibaba-cn][[:blank:]]*$/a api_key = "'$KIMI_ALIBABA_BAILIAN_API_KEY'"' ~/.kimi-code/config.toml
+        sed -i '/^[[:blank:]]*\[providers\.alibaba-cn][[:blank:]]*$/a api_key="'$KIMI_ALIBABA_BAILIAN_API_KEY'"' ~/.kimi-code/config.toml
     fi
 fi
