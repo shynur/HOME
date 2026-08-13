@@ -9,5 +9,6 @@
   "theme": "light",
   "autoCompactEnabled": true,
   "fileCheckpointingEnabled": true,
-  "askUserQuestionTimeout": "never"
+  "askUserQuestionTimeout": "never",
+  "cleanupPeriodDays": 36500
 }
