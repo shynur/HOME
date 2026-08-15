@@ -88,6 +88,15 @@ max_output_size = 131072
 capabilities = [ "thinking", "tool_use" ]
 display_name = "MiniMax-M3"
 
+[models."aicodemirror-gemini/gemini-3.1-pro-preview-customtools"]
+provider = "aicodemirror-gemini"
+model = "gemini-3.1-pro-preview-customtools"
+max_context_size = 1048576
+capabilities = [ "image_in", "video_in", "audio_in", "always_thinking", "tool_use" ]
+display_name = "Gemini 3.1 Pro Preview Custom Tools"
+support_efforts = [ "low", "medium", "high" ]
+default_effort = "high"
+
 [models."aicodemirror-gemini/gemini-3.5-flash"]
 provider = "aicodemirror-gemini"
 model = "gemini-3.5-flash"
@@ -97,12 +106,21 @@ display_name = "Gemini 3.5 Flash"
 support_efforts = [ "minimal", "low", "medium", "high" ]
 default_effort = "high"
 
-[models."aicodemirror-gemini/gemini-3.1-pro-preview-customtools"]
+[models."aicodemirror-gemini/gemini-3.6-flash"]
 provider = "aicodemirror-gemini"
-model = "gemini-3.1-pro-preview-customtools"
+model = "gemini-3.6-flash"
 max_context_size = 1048576
 capabilities = [ "image_in", "video_in", "audio_in", "always_thinking", "tool_use" ]
-display_name = "Gemini 3.1 Pro Preview Custom Tools"
+display_name = "Gemini 3.6 Flash"
+support_efforts = [ "minimal", "low", "medium", "high" ]
+default_effort = "high"
+
+[models."aicodemirror-gemini/gemini-3.7-flash"]
+provider = "aicodemirror-gemini"
+model = "gemini-3.7-flash"
+max_context_size = 1048576
+capabilities = [ "image_in", "video_in", "audio_in", "always_thinking", "tool_use" ]
+display_name = "Gemini 3.7 Flash"
 support_efforts = [ "low", "medium", "high" ]
 default_effort = "high"
 
