@@ -59,6 +59,9 @@ if set-token OPENAI_API_KEY; then
     if ! grep -Pzq '(?m)^[[:blank:]]*\[providers\.aicodemirror-gpt\][[:blank:]]*\napi_key = "[^"]+"$' ~/.kimi-code/config.toml; then
         sed -i '/^[[:blank:]]*\[providers\.aicodemirror-gpt][[:blank:]]*$/a api_key="'$OPENAI_API_KEY'"' ~/.kimi-code/config.toml
     fi
+    if ! grep -Pzq '(?m)^[[:blank:]]*\[providers\.aicodemirror-claude\][[:blank:]]*\napi_key = "[^"]+"$' ~/.kimi-code/config.toml; then
+        sed -i '/^[[:blank:]]*\[providers\.aicodemirror-claude][[:blank:]]*$/a api_key="'$OPENAI_API_KEY'"' ~/.kimi-code/config.toml
+    fi
 fi
 
 if set-token GEMINI_API_KEY; then
