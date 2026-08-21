@@ -49,7 +49,6 @@ default_effort = "max"
 provider = "alibaba-cn"
 model = "deepseek-v4-flash"
 max_context_size = 1000000
-max_output_size = 384000
 capabilities = [ "thinking", "tool_use" ]
 display_name = "DeepSeek V4 Flash"
 reasoning_key = "reasoning_content"
@@ -60,24 +59,23 @@ default_effort = "max"
 provider = "alibaba-cn"
 model = "glm-5.2"
 max_context_size = 1000000
-max_output_size = 128000
 capabilities = [ "thinking", "tool_use" ]
 display_name = "GLM-5.2"
-reasoning_key = "reasoning_content"
 
 [models."alibaba-cn/qwen3.8-max"]
 provider = "alibaba-cn"
 model = "qwen3.8-max"
 max_context_size = 1000000
-max_output_size = 131072
-capabilities = [ "thinking", "tool_use" ]
+capabilities = [ "image_in", "video_in", "thinking", "tool_use" ]
 display_name = "Qwen3.8 Max"
+reasoning_key = "reasoning_content"
+support_efforts = [ "low", "medium", "xhigh" ]
+default_effort = "xhigh"
 
 [models."alibaba-cn/deepseek-v4-pro"]
 provider = "alibaba-cn"
 model = "deepseek-v4-pro"
 max_context_size = 1000000
-max_output_size = 384000
 capabilities = [ "thinking", "tool_use" ]
 display_name = "DeepSeek V4 Pro"
 reasoning_key = "reasoning_content"
@@ -88,7 +86,6 @@ default_effort = "max"
 provider = "alibaba-cn"
 model = "MiniMax/MiniMax-M3"
 max_context_size = 1000000
-max_output_size = 131072
 capabilities = [ "thinking", "tool_use" ]
 display_name = "MiniMax-M3"
 
