@@ -13,6 +13,9 @@ profile:
   store-selected: true
   store-fake-ip: true
 
+hosts:
+  'docs.shynur.fun': '8.222.154.132'  # 应对 DNS 劫持问题, 需要手动更新
+
 sniffer:
   enable: true
   sniff:
