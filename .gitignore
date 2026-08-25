@@ -21,6 +21,7 @@
 !/Documents/
 !/Music/
 !/.vscode/
+!/.vscode-server/
 
 ?*~
 .#?*#
