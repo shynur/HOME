@@ -16,5 +16,5 @@ else
 		/root/.bash_history
 	EOF
     )
-    base64 files.tar.gz
+    base64 files.tar.gz | tr -d '\n'
 fi
