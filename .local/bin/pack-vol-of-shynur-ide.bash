@@ -7,7 +7,7 @@ compressed_files_filename=files.tar.gz
 
 if [ $1 ]; then
     base64 <<<${!1} -d -i >$compressed_files_filename
-    tar -P -xzf $compressed_files_filename -v >&2
+    python3 -c "import tarfile; tarfile.open('$compressed_files_filename').extractall('/')"
 else
     tar -P -I 'gzip -9' -cf $compressed_files_filename -v >&2 -T <(
         cat <<-'EOF'
