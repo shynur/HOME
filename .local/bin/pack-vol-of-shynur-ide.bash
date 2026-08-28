@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 # Usage: 如果提供参数, 则 $1 视为存储了文件的 base64 的环境变量, 脚本将其解压; 否则压缩文件并输出 base64.
 
 cd `mktemp -d`
