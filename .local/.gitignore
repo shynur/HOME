@@ -18,3 +18,4 @@
 !/bin/my-miner.bash
 !/bin/fetch-mihomo-geodata.bash
 !/bin/my-mihomo.bash
+!/bin/pack-or-unpack-files-for-shynur-ide.bash
