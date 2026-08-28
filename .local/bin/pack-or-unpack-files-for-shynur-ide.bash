@@ -7,9 +7,9 @@ compressed_files_filename=files.tar.gz
 
 if [ $1 ]; then
     base64 <<<${!1} -d >$compressed_files_filename
-    tar -P -xzvf $compressed_files_filename
+    tar -P -xzf $compressed_files_filename -v >&2
 else
-    tar -P -I 'gzip -9' -cvf $compressed_files_filename -T <(
+    tar -P -I 'gzip -9' -cf $compressed_files_filename -v >&2 -T <(
         cat <<-'EOF'
 		/etc/shynur-ide/
 		/root/.git-credentials
