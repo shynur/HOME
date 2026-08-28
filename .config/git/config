@@ -18,3 +18,5 @@
 [push]
         default = current
         autoSetupRemote = true
+[lfs]
+        skipsmudge = true
