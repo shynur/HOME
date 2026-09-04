@@ -1,4 +1,8 @@
 {
+	"workbench.editor.showTabs": "none",
+	"terminal.integrated.tabs.enabled": false,
+	"terminal.integrated.stickyScroll.enabled": false,
+
     "workbench.editor.enablePreview": false,
 
 	"markdown.preview.breaks": false,
