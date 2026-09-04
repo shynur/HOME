@@ -4,6 +4,7 @@
 	"terminal.integrated.stickyScroll.enabled": false,
 	"github.copilot.nextEditSuggestions.eagerness": "high",
 	"editor.stickyScroll.enabled": false,
+	"window.density.layout": "compact",
 	
     "workbench.editor.enablePreview": false,
 
