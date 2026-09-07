@@ -83,7 +83,7 @@ rules:
   - PROCESS-NAME,ToDesk.exe,DIRECT
   - DOMAIN-SUFFIX,todesk.com,DIRECT
   - DOMAIN-SUFFIX,bing.com,DIRECT
-  - DOMAIN-SUFFIX,cdn.pvvstream.pro,DIRECT  # 似乎可以直连
+  - DOMAIN-SUFFIX,pvvstream.pro,DIRECT  # 似乎可以直连
   - DOMAIN-SUFFIX,ctobsnssdk.com,DIRECT
   - DOMAIN-SUFFIX,archlinux.org,DIRECT    # 目标 site 把我的 server 的 IP 给🈲掉了
   - DOMAIN-SUFFIX,gnu.org,DIRECT          # 目标 site 把我的 server 的 IP 给🈲掉了
