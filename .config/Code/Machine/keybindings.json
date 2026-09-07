@@ -2,7 +2,6 @@
 	{
 		"key": "ctrl+a",
 		"command": "cursorLineStart"
-		,"when":"true"
 	},
 	{
 		"key": "ctrl+e",
