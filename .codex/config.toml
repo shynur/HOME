@@ -1,7 +1,7 @@
 model_provider = "aicodemirror"
 model = "gpt-5.6-sol"
-model_reasoning_effort = "ultra"
-plan_mode_reasoning_effort = "xhigh"
+model_reasoning_effort = "max"
+plan_mode_reasoning_effort = "ultra"
 disable_response_storage = true
 preferred_auth_method = "apikey"
 approvals_reviewer = "user"
