@@ -85,6 +85,7 @@ rules:
   - DOMAIN-SUFFIX,bing.com,DIRECT
   - DOMAIN-SUFFIX,bing.net,DIRECT
   - DOMAIN-SUFFIX,microsoft.com,DIRECT
+  - DOMAIN-SUFFIX,msrewardspme.azureedge.net,DIRECT
   - DOMAIN-SUFFIX,pvvstream.pro,DIRECT  # 似乎可以直连
   - DOMAIN-SUFFIX,ctobsnssdk.com,DIRECT
   - DOMAIN-SUFFIX,archlinux.org,DIRECT    # 目标 site 把我的 server 的 IP 给🈲掉了
