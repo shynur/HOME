@@ -5,6 +5,9 @@
 	"github.copilot.nextEditSuggestions.eagerness": "high",
 	"editor.stickyScroll.enabled": false,
 	"window.density.layout": "compact",
+
+	"editor.fontLigatures": true,
+	"terminal.integrated.fontLigatures.enabled": true,
 	
     "workbench.editor.enablePreview": false,
 
