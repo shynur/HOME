@@ -6,6 +6,7 @@
 	"editor.stickyScroll.enabled": false,
 	"window.density.layout": "compact",
 	"editor.dragAndDrop": false,
+	"workbench.activityBar.compact": true,
 
 	"editor.fontLigatures": true,
 	"terminal.integrated.fontLigatures.enabled": true,
