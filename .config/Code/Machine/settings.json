@@ -7,6 +7,8 @@
 	"window.density.layout": "compact",
 	"editor.dragAndDrop": false,
 	"workbench.activityBar.compact": true,
+	"workbench.colorTheme": "Dark+",
+	"window.menuBarVisibility": "classic",
 
 	"editor.fontLigatures": true,
 	"terminal.integrated.fontLigatures.enabled": true,
