@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. /etc/shynur/ai-sk.sh
+. /etc/shynur-ide/ai-sk.sh
 
 if [ "$AI_ALIBABA_BAILIAN" ]; then
     if ! grep -Pzq '(?m)^[[:blank:]]*\[providers\.seer-openai\][[:blank:]]*\napi_key[[:blank:]]*=' ~/.kimi-code/config.toml; then
