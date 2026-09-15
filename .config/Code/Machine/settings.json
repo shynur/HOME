@@ -9,6 +9,7 @@
 	"workbench.activityBar.compact": true,
 	"workbench.colorTheme": "Dark+",
 	"window.menuBarVisibility": "classic",
+	"editor.renderWhitespace": "trailing",
 
 	"editor.fontLigatures": true,
 	"terminal.integrated.fontLigatures.enabled": true,
