@@ -35,6 +35,7 @@ alias ls='ls -1 --color=auto --classify --format=verbose --human-readable --size
 alias mkdir='mkdir -p'
 alias sudo='sudo '
 alias top='nice -n 99 top'
+alias uname='uname --all'
 alias xz='xz -9 --extreme --verbose'  # 我都用 xz 了肯定不在乎 CPU 占用了, 直接最高压缩率走起.
 #alias bc='bc --warn'
 #alias bzip2='bzip2 --verbose --best'
@@ -58,7 +59,6 @@ alias xz='xz -9 --extreme --verbose'  # 我都用 xz 了肯定不在乎 CPU 占�
 #alias tar='tar --verbose'
 #alias tree='tree -ahFC'
 #alias type='type -a'  # -a 在 PATH 中查找时, 列出所有匹配项.
-#alias uname='uname --all'
 #alias wc='wc --lines --words --chars'
 #alias wget='wget --verbose'
 #alias xargs='xargs --no-run-if-empty --verbose'
