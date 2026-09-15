@@ -1,4 +1,3 @@
-model_provider = "aicodemirror"
 model = "gpt-6-astra"
 model_reasoning_effort = "max"
 plan_mode_reasoning_effort = "ultra"
@@ -10,11 +9,6 @@ sandbox_mode = "danger-full-access"
 service_tier = "fast"
 model_context_window = 1050000
 model_auto_compact_token_limit = 372000
-
-[model_providers.aicodemirror]
-name = "aicodemirror"
-base_url = "https://api-sp.claudecode.net.cn/api/codex/backend-api/codex"
-wire_api = "responses"
 
 [features]
 multi_agent = true
