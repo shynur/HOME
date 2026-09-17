@@ -10,6 +10,9 @@
 	"workbench.colorTheme": "Dark+",
 	"window.menuBarVisibility": "classic",
 	"editor.renderWhitespace": "trailing",
+	"editor.cursorBlinking": "solid",
+	"editor.cursorStyle": "block",
+	"editor.cursorSmoothCaretAnimation": "on",
 
 	"editor.fontLigatures": true,
 	"terminal.integrated.fontLigatures.enabled": true,
