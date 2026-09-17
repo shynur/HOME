@@ -9,7 +9,6 @@
 	"workbench.activityBar.compact": true,
 	"workbench.colorTheme": "Dark+",
 	"window.menuBarVisibility": "classic",
-	"editor.renderWhitespace": "trailing",
 	"editor.cursorBlinking": "solid",
 	"editor.cursorStyle": "block",
 	"editor.cursorSmoothCaretAnimation": "on",
