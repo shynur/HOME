@@ -9,9 +9,9 @@ fi
 gh repo clone shynur/kimi-sessions -- --depth=1
 cd kimi-sessions
 mkdir -p ~/.kimi-code/sessions
-mv -f -- kimi-sessions/sessions/*  \
-         kimi-sessions/sessions/.*      ~/.kimi-code/sessions
-cat kimi-sessions/session_index.jsonl >|~/.kimi-code/session_index.jsonl
+mv -f -- sessions/*  \
+         sessions/.*      ~/.kimi-code/sessions
+cat session_index.jsonl >|~/.kimi-code/session_index.jsonl
 
 if [ "$CNB_VSCODE_PROXY_URI" ]; then
     echo
