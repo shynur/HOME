@@ -12,6 +12,7 @@
 	"editor.cursorBlinking": "solid",
 	"editor.cursorStyle": "block",
 	"editor.cursorSmoothCaretAnimation": "on",
+	"git.confirmSync": false,
 
 	"editor.fontLigatures": true,
 	"terminal.integrated.fontLigatures.enabled": true,
