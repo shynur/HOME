@@ -2,6 +2,10 @@
 
 cd `mktemp -d`
 
+
+until which gh &>/dev/null; do
+    sleep 1
+done
 if ! gh auth token &>/dev/null; then
     gh auth login
 fi
