@@ -49,5 +49,9 @@
 	"[jsonl]": {
 		"editor.insertSpaces": false,
 		"editor.tabSize": 4
+	},
+
+	"[cpp]": {
+		"editor.tabSize": 4
 	}
 }
