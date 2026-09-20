@@ -8,12 +8,14 @@ fi
 
 gh repo clone shynur/kimi-sessions -- --depth=1
 cd kimi-sessions
-mkdir -p ~/.kimi-code/sessions
-mv -f -- sessions/*  \
-         sessions/.*      ~/.kimi-code/sessions
-cat session_index.jsonl >|~/.kimi-code/session_index.jsonl
 
 if [ "$CNB_VSCODE_PROXY_URI" ]; then
+    mv -f -- * .* ~/.kimi-code/
     echo
     echo ${CNB_VSCODE_PROXY_URI/'{{port}}'/58627}
+else
+    until which rsync &>/dev/null; do
+        sleep 1
+    done
+    rsync -avz --delete ./ root@172.17.0.1:/home/shynur/.kimi-code/
 fi
