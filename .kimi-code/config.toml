@@ -8,11 +8,11 @@ keep = "all"
 
 
 
-[providers.百炼]
+[providers."百炼"]
 type = "openai"
 base_url = "https://dashscope.aliyuncs.com/compatible-mode/v1"
 
-[providers.仙工-openai]
+[providers."仙工-openai"]
 type = "openai"
 base_url = "https://vibeg.seer-robotics.cn/openai/v1"
 
