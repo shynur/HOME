@@ -18,5 +18,5 @@
 [push]
         default = current
         autoSetupRemote = true
-[lfs]
-        skipsmudge = true
+[filter "lfs"]
+	smudge = git-lfs smudge --skip %f
