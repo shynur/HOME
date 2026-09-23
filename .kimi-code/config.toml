@@ -45,3 +45,31 @@ display_name = "GLM-5.3"
 reasoning_key = "reasoning_content"
 support_efforts = [ "max" ]
 default_effort = "max"
+
+[models."仙工-openai/kimi-k3"]
+provider = "仙工-openai"
+model = "moonshot/kimi-k3"
+max_context_size = 1048576
+capabilities = [ "image_in", "thinking", "tool_use", "always_thinking" ]
+display_name = "Kimi K3"
+reasoning_key = "reasoning_content"
+support_efforts = [ "max" ]
+default_effort = "max"
+
+[models."仙工-openai/qwen3.8-max"]
+provider = "仙工-openai"
+model = "qwen3.8-max"
+max_context_size = 1000000
+capabilities = [ "image_in", "video_in", "thinking", "tool_use", "always_thinking" ]
+display_name = "Qwen3.8 Max"
+reasoning_key = "reasoning_content"
+
+[models."仙工-openai/glm-5.3"]
+provider = "仙工-openai"
+model = "glm-5.3"
+max_context_size = 1000000
+capabilities = [ "thinking", "tool_use", "always_thinking" ]
+display_name = "GLM-5.3"
+reasoning_key = "reasoning_content"
+support_efforts = [ "max" ]
+default_effort = "max"
