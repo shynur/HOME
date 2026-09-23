@@ -26,7 +26,6 @@ capabilities = [ "image_in", "thinking", "tool_use", "always_thinking" ]
 display_name = "Kimi K3"
 reasoning_key = "reasoning_content"
 support_efforts = [ "max" ]
-default_effort = "max"
 
 [models."百炼/qwen3.8-max"]
 provider = "百炼"
@@ -44,7 +43,6 @@ capabilities = [ "thinking", "tool_use", "always_thinking" ]
 display_name = "GLM-5.3"
 reasoning_key = "reasoning_content"
 support_efforts = [ "max" ]
-default_effort = "max"
 
 [models."仙工-openai/kimi-k3"]
 provider = "仙工-openai"
@@ -54,7 +52,6 @@ capabilities = [ "image_in", "thinking", "tool_use", "always_thinking" ]
 display_name = "Kimi K3"
 reasoning_key = "reasoning_content"
 support_efforts = [ "max" ]
-default_effort = "max"
 
 [models."仙工-openai/qwen3.8-max"]
 provider = "仙工-openai"
@@ -72,4 +69,3 @@ capabilities = [ "thinking", "tool_use", "always_thinking" ]
 display_name = "GLM-5.3"
 reasoning_key = "reasoning_content"
 support_efforts = [ "max" ]
-default_effort = "max"
