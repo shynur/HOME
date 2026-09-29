@@ -16,6 +16,14 @@ base_url = "https://dashscope.aliyuncs.com/compatible-mode/v1"
 type = "openai"
 base_url = "https://vibeg.seer-robotics.cn/openai/v1"
 
+[providers."仙工-anthropic"]
+type = "anthropic"
+base_url = "https://vibeg.seer-robotics.cn/anthropic"
+
+[providers."仙工-gemini"]
+base_url = "https://vibeg.seer-robotics.cn/genai"
+type = "google-genai"
+
 
 
 [models."百炼/kimi-k3"]
@@ -68,4 +76,38 @@ max_context_size = 1000000
 capabilities = [ "thinking", "tool_use", "always_thinking" ]
 display_name = "GLM-5.3"
 reasoning_key = "reasoning_content"
+support_efforts = [ "max" ]
+
+[models."仙工-anthropic/claude-opus-5-5"]
+provider = "仙工-anthropic"
+model = "claude-opus-5-5"
+max_context_size = 1000000
+capabilities = [ "image_in", "thinking", "tool_use", "always_thinking" ]
+display_name = "Claude Opus 5.5"
+adaptive_thinking = true
+support_efforts = [ "max" ]
+
+[models."仙工-anthropic/claude-fable-5-1"]
+provider = "仙工-anthropic"
+model = "claude-fable-5-1"
+max_context_size = 1000000
+capabilities = [ "image_in", "thinking", "tool_use", "always_thinking" ]
+display_name = "Claude Fable 5.1"
+adaptive_thinking = true
+support_efforts = [ "max" ]
+
+[models."仙工-gemini/gemini-3.8-flash"]
+provider = "仙工-gemini"
+model = "gemini-3.8-flash"
+max_context_size = 1048576
+capabilities = [ "image_in", "video_in", "audio_in", "thinking", "tool_use", "always_thinking" ]
+display_name = "Gemini 3.8 Flash"
+
+[models."仙工-openai/gpt-6-astra"]
+provider = "仙工-openai"
+model = "gpt-6-astra"
+max_context_size = 1050000
+max_input_size = 922000
+capabilities = [ "image_in", "thinking", "tool_use", "always_thinking" ]
+display_name = "GPT-6 Astra"
 support_efforts = [ "max" ]
