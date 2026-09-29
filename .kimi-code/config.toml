@@ -42,6 +42,7 @@ max_context_size = 1000000
 capabilities = [ "image_in", "video_in", "thinking", "tool_use", "always_thinking" ]
 display_name = "Qwen3.8 Max"
 reasoning_key = "reasoning_content"
+support_efforts = [ "max" ]
 
 [models."百炼/glm-5.3"]
 provider = "百炼"
@@ -68,6 +69,7 @@ max_context_size = 1000000
 capabilities = [ "image_in", "video_in", "thinking", "tool_use", "always_thinking" ]
 display_name = "Qwen3.8 Max"
 reasoning_key = "reasoning_content"
+support_efforts = [ "max" ]
 
 [models."仙工-openai/glm-5.3"]
 provider = "仙工-openai"
@@ -102,6 +104,7 @@ model = "gemini-3.8-flash"
 max_context_size = 1048576
 capabilities = [ "image_in", "video_in", "audio_in", "thinking", "tool_use", "always_thinking" ]
 display_name = "Gemini 3.8 Flash"
+support_efforts = [ "high" ]
 
 [models."仙工-openai/gpt-6-astra"]
 provider = "仙工-openai"
