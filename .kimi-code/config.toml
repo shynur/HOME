@@ -37,7 +37,7 @@ support_efforts = [ "max" ]
 
 [models."百炼/qwen3.8-max"]
 provider = "百炼"
-model = "qwen3.8-max"
+model = "qwen3.8-max-0902"
 max_context_size = 1000000
 capabilities = [ "image_in", "video_in", "thinking", "tool_use", "always_thinking" ]
 display_name = "Qwen3.8 Max"
