@@ -19,4 +19,7 @@
         default = current
         autoSetupRemote = true
 [filter "lfs"]
-	smudge = git-lfs smudge --skip %f
+	smudge = git-lfs smudge --skip -- %f
+	process = git-lfs filter-process --skip
+	required = true
+	clean = git-lfs clean -- %f
