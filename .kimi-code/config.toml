@@ -53,12 +53,21 @@ display_name = "GLM-5.3"
 reasoning_key = "reasoning_content"
 support_efforts = [ "max" ]
 
-[models."仙工-openai/kimi-k3"]
+[models."仙工-openai/dashscope/kimi-k3"]
+provider = "仙工-openai"
+model = "dashscope/kimi-k3"
+max_context_size = 1048576
+capabilities = [ "image_in", "thinking", "tool_use", "always_thinking" ]
+display_name = "部署 Kimi K3"
+reasoning_key = "reasoning_content"
+support_efforts = [ "max" ]
+
+[models."仙工-openai/moonshot/kimi-k3"]
 provider = "仙工-openai"
 model = "moonshot/kimi-k3"
 max_context_size = 1048576
 capabilities = [ "image_in", "thinking", "tool_use", "always_thinking" ]
-display_name = "Kimi K3"
+display_name = "原厂 Kimi K3"
 reasoning_key = "reasoning_content"
 support_efforts = [ "max" ]
 
