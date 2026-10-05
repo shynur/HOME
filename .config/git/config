@@ -2,7 +2,7 @@
         name = 谢骐
         email = shynur@outlook.com
 [core]
-        editor = emacs
+        editor = emacsclient -alternate-editor= -create-frame -quiet --
 [transfer]
         #fsckObjects = true
 [color]
