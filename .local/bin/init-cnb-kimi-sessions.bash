@@ -6,11 +6,15 @@ cd `mktemp -d`
 until which gh &>/dev/null; do
     sleep 1
 done
-if ! gh auth token &>/dev/null; then
-    gh auth login
-fi
 
-gh repo clone shynur/kimi-sessions -- --depth=1
+if printf 'protocol=https\nhost=github.com\nusername=shynur\n' | git credential-cache get | grep password >/dev/null; then
+    git clone --depth=1 https://github.com/shynur/kimi-sessions
+else
+    if ! gh auth token &>/dev/null; then
+        gh auth login
+    fi
+    gh repo clone shynur/kimi-sessions -- --depth=1
+fi
 cd kimi-sessions
 
 if [ "$CNB_VSCODE_PROXY_URI" ]; then
