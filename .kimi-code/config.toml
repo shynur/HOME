@@ -148,3 +148,12 @@ capabilities = [ "image_in", "video_in", "thinking", "tool_use", "always_thinkin
 display_name = "GLM-5.3-Flash"
 reasoning_key = "reasoning_content"
 support_efforts = [ "max" ]
+
+[models."百炼/glm-5.3-flash"]
+provider = "百炼"
+model = "glm-5.3-flash"
+max_context_size = 1000000
+capabilities = [ "image_in", "video_in", "thinking", "tool_use", "always_thinking" ]
+display_name = "GLM-5.3-Flash"
+reasoning_key = "reasoning_content"
+support_efforts = [ "max" ]
