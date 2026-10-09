@@ -9,7 +9,10 @@ until which gh &>/dev/null; do
     sleep 1
 done
 
-if printf 'protocol=https\nhost=github.com\nusername=shynur\n' | git credential-cache get | grep password >/dev/null; then
+if {
+    printf 'protocol=https\nhost=github.com\nusername=98227472\n' | git credential-cache get
+    printf 'protocol=https\nhost=github.com\nusername=shynur\n'   | git credential-cache get
+} | grep password >/dev/null; then
     git clone --depth=1 https://github.com/shynur/kimi-sessions
 else
     if ! gh auth token &>/dev/null; then
