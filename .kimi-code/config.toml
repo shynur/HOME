@@ -149,4 +149,19 @@ display_name = "GLM-5.3-Flash"
 reasoning_key = "reasoning_content"
 support_efforts = [ "max" ]
 
+[models."仙工-openai/qwen3.8-flash"]
+provider = "仙工-openai"
+model = "qwen3.8-flash"
+max_context_size = 1000000
+capabilities = [ "image_in", "video_in", "thinking", "tool_use", "always_thinking" ]
+display_name = "Qwen3.8 Flash"
+reasoning_key = "reasoning_content"
+support_efforts = [ "max" ]
 
+[models."仙工-gemini/gemini-4-argon"]
+provider = "仙工-gemini"
+model = "gemini-4-argon"
+max_context_size = 1048576
+capabilities = [ "image_in", "video_in", "audio_in", "thinking", "tool_use", "always_thinking" ]
+display_name = "Gemini 4 Argon"
+support_efforts = [ "high" ]
