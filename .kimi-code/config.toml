@@ -165,3 +165,7 @@ max_context_size = 1048576
 capabilities = [ "image_in", "video_in", "audio_in", "thinking", "tool_use", "always_thinking" ]
 display_name = "Gemini 4 Argon"
 support_efforts = [ "high" ]
+
+[secondary_model]
+default_model = "百炼/glm-5.3"
+default_effort = "max"
