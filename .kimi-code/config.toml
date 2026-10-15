@@ -44,6 +44,15 @@ display_name = "Qwen3.8 Max"
 reasoning_key = "reasoning_content"
 support_efforts = [ "max" ]
 
+[models."百炼/qwen3.8-flash"]
+provider = "百炼"
+model = "qwen3.8-flash"
+max_context_size = 1000000
+capabilities = [ "image_in", "video_in", "thinking", "tool_use", "always_thinking" ]
+display_name = "Qwen3.8 Flash"
+reasoning_key = "reasoning_content"
+support_efforts = [ "max" ]
+
 [models."百炼/glm-5.3"]
 provider = "百炼"
 model = "glm-5.3"
