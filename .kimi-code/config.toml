@@ -26,6 +26,7 @@ type = "google-genai"
 
 
 
+
 [models."百炼/kimi-k3"]
 provider = "百炼"
 model = "kimi-k3"
@@ -33,7 +34,8 @@ max_context_size = 1048576
 capabilities = [ "image_in", "thinking", "tool_use", "always_thinking" ]
 display_name = "Kimi K3"
 reasoning_key = "reasoning_content"
-support_efforts = [ "max" ]
+support_efforts = [ "minimal", "low", "medium", "high", "xhigh", "max" ]
+default_effort = "max"
 
 [models."百炼/qwen3.8-max"]
 provider = "百炼"
@@ -42,7 +44,8 @@ max_context_size = 1000000
 capabilities = [ "image_in", "video_in", "thinking", "tool_use", "always_thinking" ]
 display_name = "Qwen3.8 Max"
 reasoning_key = "reasoning_content"
-support_efforts = [ "max" ]
+support_efforts = [ "minimal", "low", "medium", "high", "xhigh", "max" ]
+default_effort = "max"
 
 [models."百炼/qwen3.8-flash"]
 provider = "百炼"
@@ -51,7 +54,8 @@ max_context_size = 1000000
 capabilities = [ "image_in", "video_in", "thinking", "tool_use", "always_thinking" ]
 display_name = "Qwen3.8 Flash"
 reasoning_key = "reasoning_content"
-support_efforts = [ "max" ]
+support_efforts = [ "minimal", "low", "medium", "high", "xhigh", "max" ]
+default_effort = "max"
 
 [models."百炼/glm-5.3"]
 provider = "百炼"
@@ -60,7 +64,8 @@ max_context_size = 1000000
 capabilities = [ "thinking", "tool_use", "always_thinking" ]
 display_name = "GLM-5.3"
 reasoning_key = "reasoning_content"
-support_efforts = [ "max" ]
+support_efforts = [ "minimal", "low", "medium", "high", "xhigh", "max" ]
+default_effort = "max"
 
 [models."仙工-openai/dashscope/kimi-k3"]
 provider = "仙工-openai"
@@ -69,7 +74,8 @@ max_context_size = 1048576
 capabilities = [ "image_in", "thinking", "tool_use", "always_thinking" ]
 display_name = "部署 Kimi K3"
 reasoning_key = "reasoning_content"
-support_efforts = [ "max" ]
+support_efforts = [ "minimal", "low", "medium", "high", "xhigh", "max" ]
+default_effort = "max"
 
 [models."仙工-openai/moonshot/kimi-k3"]
 provider = "仙工-openai"
@@ -78,7 +84,8 @@ max_context_size = 1048576
 capabilities = [ "image_in", "thinking", "tool_use", "always_thinking" ]
 display_name = "原厂 Kimi K3"
 reasoning_key = "reasoning_content"
-support_efforts = [ "max" ]
+support_efforts = [ "minimal", "low", "medium", "high", "xhigh", "max" ]
+default_effort = "max"
 
 [models."仙工-openai/qwen3.8-max"]
 provider = "仙工-openai"
@@ -87,7 +94,8 @@ max_context_size = 1000000
 capabilities = [ "image_in", "video_in", "thinking", "tool_use", "always_thinking" ]
 display_name = "Qwen3.8 Max"
 reasoning_key = "reasoning_content"
-support_efforts = [ "max" ]
+support_efforts = [ "minimal", "low", "medium", "high", "xhigh", "max" ]
+default_effort = "max"
 
 [models."仙工-openai/glm-5.3"]
 provider = "仙工-openai"
@@ -96,7 +104,8 @@ max_context_size = 1000000
 capabilities = [ "thinking", "tool_use", "always_thinking" ]
 display_name = "GLM-5.3"
 reasoning_key = "reasoning_content"
-support_efforts = [ "max" ]
+support_efforts = [ "minimal", "low", "medium", "high", "xhigh", "max" ]
+default_effort = "max"
 
 [models."仙工-anthropic/claude-opus-5-5"]
 provider = "仙工-anthropic"
@@ -131,7 +140,8 @@ max_context_size = 1050000
 max_input_size = 922000
 capabilities = [ "image_in", "thinking", "tool_use", "always_thinking" ]
 display_name = "GPT-6 Astra"
-support_efforts = [ "max" ]
+support_efforts = [ "minimal", "low", "medium", "high", "xhigh", "max" ]
+default_effort = "max"
 
 [models."仙工-openai/gpt-6.1-sol"]
 provider = "仙工-openai"
@@ -139,7 +149,8 @@ model = "gpt-6.1-sol"
 max_context_size = 1050000
 capabilities = [ "image_in", "thinking", "tool_use", "always_thinking" ]
 display_name = "GPT-6.1 Sol"
-support_efforts = [ "max" ]
+support_efforts = [ "minimal", "low", "medium", "high", "xhigh", "max" ]
+default_effort = "max"
 
 [models."仙工-openai/grok-4.7"]
 provider = "仙工-openai"
@@ -156,7 +167,8 @@ max_context_size = 1000000
 capabilities = [ "image_in", "video_in", "thinking", "tool_use", "always_thinking" ]
 display_name = "GLM-5.3-Flash"
 reasoning_key = "reasoning_content"
-support_efforts = [ "max" ]
+support_efforts = [ "minimal", "low", "medium", "high", "xhigh", "max" ]
+default_effort = "max"
 
 [models."仙工-openai/qwen3.8-flash"]
 provider = "仙工-openai"
@@ -165,7 +177,8 @@ max_context_size = 1000000
 capabilities = [ "image_in", "video_in", "thinking", "tool_use", "always_thinking" ]
 display_name = "Qwen3.8 Flash"
 reasoning_key = "reasoning_content"
-support_efforts = [ "max" ]
+support_efforts = [ "minimal", "low", "medium", "high", "xhigh", "max" ]
+default_effort = "max"
 
 [models."仙工-gemini/gemini-4-argon"]
 provider = "仙工-gemini"
@@ -175,6 +188,9 @@ capabilities = [ "image_in", "video_in", "audio_in", "thinking", "tool_use", "al
 display_name = "Gemini 4 Argon"
 support_efforts = [ "high" ]
 
+
+
+
 [secondary_model]
 default_model = "百炼/glm-5.3"
-default_effort = "max"
+default_effort = "high"
