@@ -64,8 +64,8 @@ alias xz='xz -9 --extreme --verbose'  # 我都用 xz 了肯定不在乎 CPU 占�
 #alias xargs='xargs --no-run-if-empty --verbose'
 
 alias emacs='emacsclient -alternate-editor= -create-frame -quiet --'
-alias nvim=emacs
-alias vim=emacs
+#alias nvim=emacs
+#alias vim=emacs
 
 if false; then  # 暂时没有用 ros 的需求.  而且这玩意 API/usage 也一直在变.
     alias ros2='which -s ros2 || {
