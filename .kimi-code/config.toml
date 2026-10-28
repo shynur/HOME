@@ -1,6 +1,7 @@
 default_model = "百炼/k3.1-pro"
 default_permission_mode = "auto"
 telemetry = false
+auto_session_title = false
 
 [thinking]
 enabled = true
