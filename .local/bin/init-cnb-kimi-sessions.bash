@@ -19,6 +19,7 @@ else
     gh repo clone shynur/kimi-sessions -- --depth=1
 fi
 cd kimi-sessions
+git lfs pull
 
 until which rsync &>/dev/null; do
     sleep 1
