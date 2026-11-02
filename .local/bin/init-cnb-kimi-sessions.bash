@@ -16,6 +16,7 @@ else
     if ! gh auth token &>/dev/null; then
         gh auth login
     fi
+    gh auth setup-git --hostname github.com
     gh repo clone shynur/kimi-sessions -- --depth=1
 fi
 cd kimi-sessions
