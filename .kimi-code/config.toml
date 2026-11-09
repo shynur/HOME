@@ -221,6 +221,17 @@ reasoning_key = "reasoning_content"
 support_efforts = [ "low", "medium", "high", "xhigh", "max" ]
 default_effort = "max"
 
+[models."UNKNOWN/mimo-v2.6-pro"]
+provider = "UNKNOWN"
+model = "xiaomi/mimo-v2.6-pro"
+max_context_size = 1048576
+max_output_size = 131072
+capabilities = [ "image_in", "video_in", "audio_in", "thinking", "tool_use", "always_thinking" ]
+display_name = "MiMo-V2.6-Pro"
+reasoning_key = "reasoning_content"
+support_efforts = [ "low", "medium", "high" ]
+default_effort = "high"
+
 [models."百炼/deepseek-v4.1-flash"]
 provider = "百炼"
 model = "deepseek-v4.1-flash-1017"
