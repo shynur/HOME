@@ -232,13 +232,24 @@ reasoning_key = "reasoning_content"
 support_efforts = [ "low", "medium", "high" ]
 default_effort = "high"
 
-[models."百炼/deepseek-v4.1-flash"]
-provider = "百炼"
-model = "deepseek-v4.1-flash-1017"
+[models."仙工-openai/deepseek-v4.1-flash"]
+provider = "仙工-openai"
+model = "deepseek/deepseek-flash"
 max_context_size = 1048576
 max_output_size = 393216
 capabilities = [ "image_in", "thinking", "tool_use", "always_thinking" ]
 display_name = "DeepSeek V4.1 Flash 1017"
+reasoning_key = "reasoning_content"
+support_efforts = [ "low", "high", "max" ]
+default_effort = "max"
+
+[models."仙工-openai/qiniu/deepseek-v4.1-flash"]
+provider = "仙工-openai"
+model = "七牛云 DeepSeek/deepseek-flash"
+max_context_size = 1048576
+max_output_size = 393216
+capabilities = [ "image_in", "thinking", "tool_use", "always_thinking" ]
+display_name = "七牛云 DeepSeek V4.1 Flash 1017"
 reasoning_key = "reasoning_content"
 support_efforts = [ "low", "high", "max" ]
 default_effort = "max"
