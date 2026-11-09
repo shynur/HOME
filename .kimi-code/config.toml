@@ -158,21 +158,21 @@ support_efforts = [ "high" ]
 
 [models."仙工-openai/gpt-6-astra"]
 provider = "仙工-openai"
-model = "gpt-6-astra"
+model = "七牛云/coding-openai/gpt-6-astra"
 max_context_size = 1050000
 max_input_size = 922000
 capabilities = [ "image_in", "thinking", "tool_use", "always_thinking" ]
 display_name = "GPT-6 Astra"
-support_efforts = [ "minimal", "low", "medium", "high", "xhigh", "max" ]
+support_efforts = [ "low", "medium", "high", "xhigh", "max" ]
 default_effort = "max"
 
 [models."仙工-openai/gpt-6.1-sol"]
 provider = "仙工-openai"
-model = "gpt-6.1-sol"
+model = "七牛云/coding-openai/gpt-6.1-sol"
 max_context_size = 1050000
 capabilities = [ "image_in", "thinking", "tool_use", "always_thinking" ]
 display_name = "GPT-6.1 Sol"
-support_efforts = [ "minimal", "low", "medium", "high", "xhigh", "max" ]
+support_efforts = [ "low", "medium", "high", "xhigh", "max" ]
 default_effort = "max"
 
 [models."仙工-openai/grok-4.7"]
