@@ -2,13 +2,11 @@
 
 set -eo pipefail
 
-cd `mktemp -d`
-
 if {
     printf 'protocol=https\nhost=github.com\nusername=98227472\n' | git credential-cache get
     printf 'protocol=https\nhost=github.com\nusername=shynur\n'   | git credential-cache get
 } | grep password >/dev/null; then
-    git clone --depth=1 https://github.com/shynur/kimi-sessions
+    echo 'Use git credential'
 else
     until which gh &>/dev/null; do
         sleep 1
@@ -17,18 +15,23 @@ else
         gh auth login
     fi
     gh auth setup-git --hostname github.com
-    gh repo clone shynur/kimi-sessions -- --depth=1
+    echo 'Use gh credential'
 fi
-cd kimi-sessions
-git lfs pull
 
-until which rsync &>/dev/null; do
-    sleep 1
-done
-if [ "$CNB_VSCODE_PROXY_URI" ]; then
-    rsync -aI ./ ~/.kimi-code/
-    echo
-    echo ${CNB_VSCODE_PROXY_URI/'{{port}}'/58627}
+cd ~/.kimi-code
+if [ X`git rev-parse --show-toplevel 2>/dev/null` = X`pwd -P` ]; then
+    git pull
+    git lfs pull
 else
-    rsync -avz --delete ./ root@172.17.0.1:/home/shynur/.kimi-code/
+    cd `mktemp -d`
+    git clone --depth=1 https://github.com/shynur/kimi-sessions
+    git lfs pull
+    until which rsync &>/dev/null; do
+        sleep 1
+    done
+    rsync -aI ./ ~/.kimi-code/
+fi
+
+if [ "$CNB_VSCODE_PROXY_URI" ]; then
+    echo ${CNB_VSCODE_PROXY_URI/'{{port}}'/58627}
 fi
