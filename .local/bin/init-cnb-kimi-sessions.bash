@@ -24,12 +24,12 @@ if [ X`git rev-parse --show-toplevel 2>/dev/null` = X`pwd -P` ]; then
     git lfs pull
 else
     cd `mktemp -d`
-    git clone --depth=1 https://github.com/shynur/kimi-sessions
+    git clone --depth=1 https://github.com/shynur/kimi-sessions .
     git lfs pull
     until which rsync &>/dev/null; do
         sleep 1
     done
-    rsync -aI kimi-sessions/ ~/.kimi-code/
+    rsync -aI ./ ~/.kimi-code/
 fi
 
 if [ "$CNB_VSCODE_PROXY_URI" ]; then
