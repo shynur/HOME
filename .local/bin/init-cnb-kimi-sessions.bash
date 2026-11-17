@@ -18,6 +18,12 @@ else
     echo 'Use gh credential'
 fi
 
+until git lfs version &>/dev/null; do
+    sleep 1
+done
+until [ -L ~/.kimi-code ]; do
+    sleep 1
+done
 cd ~/.kimi-code
 if [ X`git rev-parse --show-toplevel 2>/dev/null` = X`pwd -P` ]; then
     git pull
