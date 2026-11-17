@@ -29,7 +29,7 @@ else
     until which rsync &>/dev/null; do
         sleep 1
     done
-    rsync -aI ./ ~/.kimi-code/
+    rsync -aI kimi-sessions/ ~/.kimi-code/
 fi
 
 if [ "$CNB_VSCODE_PROXY_URI" ]; then
