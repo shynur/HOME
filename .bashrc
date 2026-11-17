@@ -170,11 +170,8 @@ if which pipx &>/dev/null; then
     eval "$(register-python-argcomplete pipx)"
 fi
 
-if [ -s $NVM_DIR/nvm.sh ]; then
-    . $NVM_DIR/nvm.sh
-    if [ -s $NVM_DIR/bash_completion ]; then
-        . $NVM_DIR/bash_completion
-    fi
+if [ -s $NVM_DIR/bash_completion ]; then
+    . $NVM_DIR/bash_completion
     . <(npm completion)
 fi
 
