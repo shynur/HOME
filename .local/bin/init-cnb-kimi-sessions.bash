@@ -31,7 +31,8 @@ if [ -d ~/.kimi-code.mounted ]; then
 fi
 cd ~/.kimi-code
 if [ X`git rev-parse --show-toplevel 2>/dev/null` = X`pwd -P` ]; then
-    git pull
+    git fetch origin
+    git reset --hard origin/`git branch --show-current`
     git lfs pull
 else
     echo '当前 .kimi-code 还不是一个人 git repo, 需要全新 clone'
